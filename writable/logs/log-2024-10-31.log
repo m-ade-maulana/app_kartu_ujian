@@ -1,0 +1,777 @@
+ERROR - 2024-10-31 18:07:58 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Home.php(12): App\Models\LinkModel->getAllLink()
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\app\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Home.php(12): App\Models\LinkModel->getAllLink()
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:07:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `link`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(12): App\Models\LinkModel->getAllLink()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:08:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:08:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:09:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:09:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:09:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:09:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:16:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:16:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:17:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:17:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:19:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:19:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-10-31 18:19:32 --> Undefined variable $peserta_x
+in APPPATH\Views\pages\peserta\kelas_xi.php on line 330.
+ 1 APPPATH\Views\pages\peserta\kelas_xi.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $peserta_x', 'APPPATH\\Views\\pages\\peserta\\kelas_xi.php', 330)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\peserta\\kelas_xi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/peserta/kelas_xi', [], true)
+ 5 APPPATH\Controllers\Peserta.php(49): view('pages/peserta/kelas_xi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:20:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:20:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-10-31 18:20:27 --> Undefined variable $peserta_xi
+in APPPATH\Views\pages\peserta\kelas_xi.php on line 330.
+ 1 APPPATH\Views\pages\peserta\kelas_xi.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $peserta_xi', 'APPPATH\\Views\\pages\\peserta\\kelas_xi.php', 330)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\peserta\\kelas_xi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/peserta/kelas_xi', [], true)
+ 5 APPPATH\Controllers\Peserta.php(49): view('pages/peserta/kelas_xi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:25:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:25:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:26:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:26:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:26:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:26:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:26:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:26:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:26:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:26:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:27:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:26 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_peserta` SET `ruangan` = :ruangan:
+WHERE `data_peserta`.`id_peserta` IN :data_peserta.id_peserta:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_peserta` SET `ruangan` = :ruangan:
+WHERE `data_peserta`.`id_peserta` IN :data_peserta.id_peserta:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_peserta` SET `ruangan` = :ruangan:
+WHERE `data_peserta`.`id_peserta` IN :data_peserta.id_peserta:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_peserta` SET `ruangan` = :ruangan:
+WHERE `data_peserta`.`id_peserta` IN :data_peserta.id_peserta:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_peserta` SET `ruangan` = :ruangan:
+WHERE `data_peserta`.`id_peserta` IN :data_peserta.id_peserta:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_pe...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', Array)
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `data_peserta` SET `ruangan` = :ruangan:
+WHERE `data_peserta`.`id_peserta` IN :data_peserta.id_peserta:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\Peserta.php(114): CodeIgniter\Model->update('1117', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->edit_kelas_xi('1117')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(40): App\Models\LinkModel->getAllLink()
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\app\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(40): App\Models\LinkModel->getAllLink()
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `link`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Peserta.php(40): App\Models\LinkModel->getAllLink()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:27:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-10-31 18:27:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'test_kartu_ujia...', 3306, '', 0)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(40): App\Models\LinkModel->getAllLink()
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_kartu_ujian_beta\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\app_kartu_ujian_beta\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\app_kartu_ujian_beta\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\app_kartu_ujian_beta\app\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\app_kartu_ujian_beta\app\Controllers\Peserta.php(40): App\Models\LinkModel->getAllLink()
+#7 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+#8 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#9 C:\xampp\htdocs\app_kartu_ujian_beta\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_kartu_ujian_beta\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_kartu_ujian_beta\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-10-31 18:27:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `link`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\LinkModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Peserta.php(40): App\Models\LinkModel->getAllLink()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peserta->kelas_xi()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:28:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:28:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:28:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:28:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:28:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model is deprecated in APPPATH\Controllers\Peserta.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:28:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Peserta::$model2 is deprecated in APPPATH\Controllers\Peserta.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Peserta->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:28:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pengawas::$model is deprecated in APPPATH\Controllers\Pengawas.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pengawas->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:28:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pengawas::$model2 is deprecated in APPPATH\Controllers\Pengawas.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pengawas->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-31 18:29:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pengawas::$model is deprecated in APPPATH\Controllers\Pengawas.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pengawas->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2024-10-31 18:29:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pengawas::$model2 is deprecated in APPPATH\Controllers\Pengawas.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pengawas->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2024-10-31 18:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 18:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
