@@ -58,6 +58,10 @@ abstract class BaseController extends Controller
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
+        header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Methods: POST,GET, OPTIONS");
+        header('Access-Control-Allow-Headers: *');
+
         // Preload any models, libraries, etc, here.
         $this->link_model = new LinkModel();
         $this->pengawas_model = new PengawasModel();
