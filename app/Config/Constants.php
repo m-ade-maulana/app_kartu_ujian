@@ -101,8 +101,8 @@ define('EVENT_PRIORITY_HIGH', 10);
  | Ini adalah skrip dinamis url 
  */
 
-$base = !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost:8080';
+// $base = !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost:8080';
 
-$base_url = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $base . '/';
+// $base_url = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $base . '/';
 
-defined('BASE_URL') || define('BASE_URL', $base_url);
+// defined('BASE_URL') || define('BASE_URL', $base_url);
