@@ -12,6 +12,7 @@
         "ext-mysqli": "*",
         "dompdf/dompdf": "^3.0",
         "laminas/laminas-escaper": "^2.9",
+        "mpdf/mpdf": "^8.2",
         "psr/log": "^1.1"
     },
     "require-dev": {

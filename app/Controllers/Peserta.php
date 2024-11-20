@@ -8,6 +8,7 @@ use App\Models\PesertaModel;
 
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
+use Mpdf\Mpdf;
 use Psr\Log\LoggerInterface;
 
 class Peserta extends BaseController
@@ -191,6 +192,12 @@ class Peserta extends BaseController
         $data['legitimasi_projek'] = session()->get('legitimasi_projek');
         $data['legitimasi_teori'] = session()->get('legitimasi_teori');
 
+        $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
+        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
+        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.jpg');
+
+        $data['style'] = file_get_contents(ROOTPATH . '/public/assets/css/adminlte.css');
+
         $nama = session()->get('nama');
         $nis = session()->get('nis');
 
@@ -200,6 +207,8 @@ class Peserta extends BaseController
         $html = view('cetak_legitimasi_projek', $data);
 
         return $this->pdfgenerator->generate($html, $file_pdf, $paper);
+
+        // return view('cetak_legitimasi_projek', $data);
     }
 
     public function cetak_kartu_legitimasi_teori()
@@ -212,6 +221,9 @@ class Peserta extends BaseController
         $data['foto'] = session()->get('foto');
         $data['legitimasi_projek'] = session()->get('legitimasi_projek');
         $data['legitimasi_teori'] = session()->get('legitimasi_teori');
+        $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
+        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
+        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.jpg');
 
         $nama = session()->get('nama');
         $nis = session()->get('nis');
@@ -222,5 +234,14 @@ class Peserta extends BaseController
         $html = view('kartu_peserta', $data);
 
         return $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+    }
+
+    private function imageToBase64($path)
+    {
+        $path = $path;
+        $type = pathinfo($path, PATHINFO_EXTENSION);
+        $data = file_get_contents($path);
+        $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+        return $base64;
     }
 }

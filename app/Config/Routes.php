@@ -44,13 +44,14 @@ $routes->get('/home', 'Home::index');
 $routes->get('/peserta/kelas_x', 'Peserta::kelas_x');
 $routes->get('/peserta/kelas_xi', 'Peserta::kelas_xi');
 $routes->get('/peserta/kelas_xii', 'Peserta::kelas_xii');
-$routes->get('/cek_peserta', 'Peserta::cek_peserta');
-$routes->get('/kartu_peserta', 'Peserta::kartu_peserta');
-$routes->get('/cetak_kartu_legitimasi_projek', 'Peserta::cetak_kartu_legitimasi_projek');
-
 $routes->add('/peserta/edit/ruangan/(:any)/kelas_x', 'Peserta::edit_kelas_x/$1');
 $routes->add('/peserta/edit/legitimasi_projek/(:any)/kelas_x', 'Peserta::edit_kelas_x/$1');
 $routes->add('/peserta/edit/legitimasi_teori/(:any)/kelas_x', 'Peserta::edit_kelas_x/$1');
+
+// Halaman Peserta
+$routes->get('/cek_peserta', 'Peserta::cek_peserta');
+$routes->get('/kartu_peserta', 'Peserta::kartu_peserta');
+$routes->get('/cetak_kartu_legitimasi_projek', 'Peserta::cetak_kartu_legitimasi_projek');
 
 $routes->add('/peserta/edit/ruangan/(:any)/kelas_xi', 'Peserta::edit_kelas_xi/$1');
 $routes->add('/peserta/edit/legitimasi_projek/(:num)/kelas_xi', 'Peserta::edit_kelas_xi/$1');

@@ -4,23 +4,18 @@ namespace App\Libraries;
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
-use Dompdf\Image;;
+use Dompdf\Image;
 
 class Pdfgenerator
 {
-    public function generate($html, $filename = '', $paper = '', $stream = TRUE)
+    public function generate($html, $filename = '', $paper = '')
     {
         $options = new Options();
-        $options->set('isRemoteEnabled', TRUE);
+        $options->set('isRemoteEnabled', FALSE);
         $dompdf = new Dompdf($options);
         $dompdf->loadHtml($html);
         $dompdf->setPaper($paper, 'portrait');
         $dompdf->render();
-        if ($stream) {
-            $dompdf->stream($filename . ".pdf", ['Attachment' => 0]);
-            exit();
-        } else {
-            return $dompdf->output();
-        }
+        $dompdf->stream($filename . ".pdf", ['Attachment' => false]);
     }
 }
