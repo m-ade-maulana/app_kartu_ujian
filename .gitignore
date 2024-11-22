@@ -1,4 +1,5 @@
 /vendor/
-/writable/
+/writable/logs/
+/writable/debugbar/
 /db/
 .env
