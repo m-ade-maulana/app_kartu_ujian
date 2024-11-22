@@ -194,7 +194,7 @@ class Peserta extends BaseController
 
         $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
         $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/' . session()->get('foto'));
-        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.jpg');
+        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.gif');
 
         $data['style'] = file_get_contents(ROOTPATH . '/public/assets/css/adminlte.css');
 
