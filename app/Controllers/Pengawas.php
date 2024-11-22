@@ -57,7 +57,7 @@ class Pengawas extends BaseController
 
     public function insert_pengawas()
     {
-        // $validation = \Config\Services::validation();
+        $validation = \Config\Services::validation();
         $this->validation->setRule('nama', 'Nama', 'required');
 
         $dataValid = $this->validation->withRequest($this->request)->run();
