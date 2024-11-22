@@ -52,13 +52,13 @@
                             </div>
                             <div class="d-grid gap-2 mt-2">
                                 <?php
-                                if ($legitimasi_projek == "no" && $legitimasi_teori == "no") { ?>
+                                if ($legitimasi_projek == "no") { ?>
                                     <a href="#" target="_blank" class="btn btn-secondary fw-bold" tabindex="-1">Cetak Kartu legitimasi Projek</a>
                                     <a href="#" target="_blank" class="btn btn-secondary fw-bold" tabindex="-1">Cetak Kartu Legitimasi Teori</a>
-                                <?php } else if ($legitimasi_projek == "yes" && $legitimasi_teori == "no") { ?>
+                                <?php } else if ($legitimasi_projek == "yes") { ?>
                                     <a href="<?= site_url('/cetak_kartu_legitimasi_projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
-                                    <a href="#" target="_blank" class="btn btn-secondary fw-bold" tabindex="-1">Cetak Kartu Legitimasi Teori</a>
-                                <?php } else { ?>
+                                    <!-- <a href="#" target="_blank" class="btn btn-secondary fw-bold" tabindex="-1">Cetak Kartu Legitimasi Teori</a> -->
+                                <?php } else if ($legitimasi_teori == "yes") { ?>
                                     <a href="<?= site_url('/cetak_kartu_legitimasi_projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
                                     <a href="" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu Legitimasi Teori</a>
                                 <?php }
