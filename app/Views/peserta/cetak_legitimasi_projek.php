@@ -44,19 +44,19 @@
                     <tr>
                         <td style="padding-left: 10px;">Jurusan</td>
                         <?php
-                        if ($kelas = "X AKL" || $kelas = "XI AKL" || $kelas = "XII AKL") { ?>
+                        if ($kelas == "X AK" | $kelas == "XI AKL" | $kelas == "XII AKL") { ?>
                             <td style="padding-left: 10px;">Akuntansi Keuangan Lembaga</td>
-                        <?php } else if ($kelas = "X MP" || $kelas = "XI MP" || $kelas = "XII MP") { ?>
+                        <?php } else if ($kelas == "X MP" || $kelas == "XI MP" || $kelas == "XII MP") { ?>
                             <td style="padding-left: 10px;">Manajemen Perkantoran</td>
-                        <?php } else if ($kelas = "X AN" || $kelas = "XI AN" || $kelas = "XII AN") { ?>
+                        <?php } else if ($kelas == "X AN" || $kelas == "XI AN" || $kelas == "XII AN") { ?>
                             <td style="padding-left: 10px;">Animasi</td>
-                        <?php } else if ($kelas = "X TJKT" || $kelas = "XI TJKT" || $kelas = "XII TJKT") { ?>
+                        <?php } else if ($kelas == "X TJKT" || $kelas == "XI TKJ" || $kelas == "XII TKJ") { ?>
                             <td style="padding-left: 10px;">Teknik Jaringan Komputer dan Telekomunikasi</td>
-                        <?php } else if ($kelas = "X DKV" || $kelas = "XI DKV" || $kelas = "XII DKV") { ?>
+                        <?php } else if ($kelas == "X DKV" || $kelas == "XI DKV" || $kelas == "XII DKV") { ?>
                             <td style="padding-left: 10px;">Desain Komunikasi Visual</td>
-                        <?php } else if ($kelas = "X BP" || $kelas = "XI BP" || $kelas = "XII BP") { ?>
+                        <?php } else if ($kelas == "X BP" || $kelas == "XI PSPT" || $kelas == "XII PSPT") { ?>
                             <td style="padding-left: 10px;">Broadcasting dan Perfilman</td>
-                        <?php } else if ($kelas = "X PPLG" || $kelas = "XI PPLG" || $kelas = "XII PPLG") { ?>
+                        <?php } else if ($kelas == "X PPLG" || $kelas == "XI RPL" || $kelas == "XII RPL") { ?>
                             <td style="padding-left: 10px;">Pengembangan Perangkat Lunak dan GIM</td>
                         <?php } ?>
 
