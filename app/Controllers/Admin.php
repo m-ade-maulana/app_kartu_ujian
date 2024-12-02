@@ -96,7 +96,7 @@ class Admin extends BaseController
         $data['mapel'] = $this->jadwal_model->findAll();
         $data['nama'] = session()->get('nama');
 
-        return view('/admin/jadwal_ujian', $data);
+        return view('admin/jadwal_ujian', $data);
     }
 
     // Update Fitur
