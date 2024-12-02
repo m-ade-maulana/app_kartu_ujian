@@ -48,18 +48,18 @@
                                     <td><?= esc($p['kelas']) ?></td>
                                     <td>
                                         <?php
-                                        if ($p['legitimasi_projek'] == 'yes') { ?>
+                                        if ($p['legitimasi_projek'] == 'Yes') { ?>
                                             <a href="<?= site_url('admin/cetak-legitimasi-projek/' . $p['nis']) ?>" target="_blank" class="btn btn-sm btn-primary fw-bold">Unduh legitimasi Projek</a>
-                                        <?php } else if ($p['legitimasi_projek'] == 'no') { ?>
+                                        <?php } else if ($p['legitimasi_projek'] == 'No') { ?>
                                             <a href="#" class="btn btn-sm btn-secondary fw-bold" tabindex="-1">Unduh Legitimasi Projek</a>
                                         <?php }
                                         ?>
                                     </td>
                                     <td>
                                         <?php
-                                        if ($p['legitimasi_teori'] == 'yes') { ?>
+                                        if ($p['legitimasi_teori'] == 'Yes') { ?>
                                             <a href="<?= site_url('admin/cetak-legitimasi-teori/' . $p['nis']) ?>" target="_blank" class="btn btn-sm btn-primary fw-bold">Unduh legitimasi Teori</a>
-                                        <?php } else if ($p['legitimasi_teori'] == 'no') { ?>
+                                        <?php } else if ($p['legitimasi_teori'] == 'No') { ?>
                                             <a href="#" class="btn btn-sm btn-secondary fw-bold" tabindex="-1">Unduh Legitimasi Teori</a>
                                         <?php }
                                         ?>
