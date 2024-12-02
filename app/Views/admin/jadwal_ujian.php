@@ -47,13 +47,15 @@
                             <?php
                             $no = 1;
                             foreach ($mapel as $mapels) { ?>
-                                <td><?= $no++ ?></td>
-                                <td><?= $mapels['kode_mapel'] ?></td>
-                                <td><?= $mapels['nama_mapel'] ?></td>
-                                <td><?= $mapels['tanggal'] ?></td>
-                                <td><?= $mapels['jam_mulai'] ?></td>
-                                <td><?= $mapels['jam_selesai'] ?></td>
-                                <td><?= $mapels['kelas'] ?></td>
+                                <tr>
+                                    <td><?= $no++ ?></td>
+                                    <td><?= $mapels['kode_mapel'] ?></td>
+                                    <td><?= $mapels['nama_mapel'] ?></td>
+                                    <td><?= $mapels['tanggal'] ?></td>
+                                    <td><?= $mapels['jam_mulai'] ?></td>
+                                    <td><?= $mapels['jam_selesai'] ?></td>
+                                    <td><?= $mapels['kelas'] ?></td>
+                                </tr>
                             <?php }
                             ?>
                         </tbody>

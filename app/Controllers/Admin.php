@@ -253,7 +253,7 @@ class Admin extends BaseController
                     return redirect()->to('/jadwal_ujian');
                 } else {
                     alert_swal('error', 'Suksess', 'Mata Pelajaran tidak berhasil ditambahkan');
-                    return redirect()->to('/jadwal_ujian');
+                    return redirect()->to('admin/jadwal_ujian');
                 }
             }
         }
