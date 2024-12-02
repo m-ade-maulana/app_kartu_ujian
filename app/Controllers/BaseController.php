@@ -72,5 +72,10 @@ abstract class BaseController extends Controller
 
         // $this->session = \Config\Services::session();
         $this->validation = \Config\Services::validation();
+        $this->db = \Config\Database::connect();
+
+        if (empty(session()->get('username'))) {
+            return redirect()->to('/');
+        }
     }
 }

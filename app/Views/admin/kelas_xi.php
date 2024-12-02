@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('admin/layout/main') ?>
 
 <?= $this->section('content') ?>
 
@@ -13,7 +13,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item">Data Peserta/<a href="#">Kelas X</a></li>
+                        <li class="breadcrumb-item">Data Peserta/<a href="#">Kelas XI</a></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -24,37 +24,37 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-            <h3>Data Kelas X</h3>
+            <h3>Data Kelas XI</h3>
             <div class="card card-primary card-outline card-outline-tabs">
                 <div class="card-header p-0 border-bottom-0">
                     <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="kelas_x_mp_tab" data-toggle="pill" href="#kelas_x_mp" role="tab" aria-controls="kelas_x_mp" aria-selected="true">Manajemen Perkantoran</a>
+                            <a class="nav-link active" id="kelas_xi_mp_tab" data-toggle="pill" href="#kelas_xi_mp" role="tab" aria-controls="kelas_xi_mp" aria-selected="true">Manajemen Perkantoran</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="kelas_x_akl_tab" data-toggle="pill" href="#kelas_x_akl" role="tab" aria-controls="kelas_x_akl" aria-selected="false">Akuntansi Keuangan</a>
+                            <a class="nav-link" id="kelas_xi_akl_tab" data-toggle="pill" href="#kelas_xi_akl" role="tab" aria-controls="kelas_xi_akl" aria-selected="false">Akuntansi Keuangan Lembaga</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="kelas_x_an_tab" data-toggle="pill" href="#kelas_x_an" role="tab" aria-controls="kelas_x_an" aria-selected="false">Animasi</a>
+                            <a class="nav-link" id="kelas_xi_an_tab" data-toggle="pill" href="#kelas_xi_an" role="tab" aria-controls="kelas_xi_an" aria-selected="false">Animasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="kelas_x_tjkt_tab" data-toggle="pill" href="#kelas_x_tjkt" role="tab" aria-controls="kelas_x_tjkt" aria-selected="false">Teknik Jaringan dan Komputer</a>
+                            <a class="nav-link" id="kelas_xi_tjkt_tab" data-toggle="pill" href="#kelas_xi_tjkt" role="tab" aria-controls="kelas_xi_tjkt" aria-selected="false">Teknik Komputer dan Jaringan</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" id="kelas_x_dkv_tab" data-toggle="pill" href="#kelas_x_dkv" role="tab" aria-controls="kelas_x_dkv" aria-selected="false">Desain Komunikasi Visual</a>
+                            <a class="nav-link" id="kelas_xi_dkv_tab" data-toggle="pill" href="#kelas_xi_dkv" role="tab" aria-controls="kelas_xi_dkv" aria-selected="false">Desain Komunikasi Visual</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="kelas_x_bp_tab" data-toggle="pill" href="#kelas_x_bp" role="tab" aria-controls="kelas_x_bp" aria-selected="false">Broadcasting dan Perfileman</a>
+                            <a class="nav-link" id="kelas_xi_bp_tab" data-toggle="pill" href="#kelas_xi_bp" role="tab" aria-controls="kelas_xi_bp" aria-selected="false">Broadcasting dan Perfileman</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="kelas_x_pplg_tab" data-toggle="pill" href="#kelas_x_pplg" role="tab" aria-controls="kelas_x_pplg" aria-selected="false">Pengembangan Perangkat Lunak dan Gim</a>
+                            <a class="nav-link" id="kelas_xi_pplg_tab" data-toggle="pill" href="#kelas_xi_pplg" role="tab" aria-controls="kelas_xi_pplg" aria-selected="false">Rekayasa Perangkat Lunak</a>
                         </li>
                     </ul>
                 </div>
                 <div class="card-body">
                     <div class="tab-content" id="custom-tabs-four-tabContent">
-                        <div class="tab-pane fade show active" id="kelas_x_mp" role="tabpanel" aria-labelledby="kelas_x_mp_tab">
+                        <div class="tab-pane fade show active" id="kelas_xi_mp" role="tabpanel" aria-labelledby="kelas_xi_mp_tab">
                             <table id="mp" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -70,22 +70,22 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($peserta_x_mp as $pxmp) { ?>
+                                    foreach ($peserta_xi_mp as $pxmp) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($pxmp['nama']) ?></td>
                                             <td><?= esc($pxmp['kelas']) ?></td>
                                             <td>
                                                 <?= esc($pxmp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasX<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxmp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <a href="/peserta.p/hapus_data/<?= $pxmp['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -96,7 +96,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="kelas_x_akl" role="tabpanel" aria-labelledby="kelas_x_akl_tab">
+                        <div class="tab-pane fade" id="kelas_xi_akl" role="tabpanel" aria-labelledby="kelas_xi_akl_tab">
                             <table id="akl" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -112,22 +112,22 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($peserta_x_ak as $pxak) { ?>
+                                    foreach ($peserta_xi_ak as $pxak) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($pxak['nama']) ?></td>
                                             <td><?= esc($pxak['kelas']) ?></td>
                                             <td>
                                                 <?= esc($pxak['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasX<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxak['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxak['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <a href="/peserta.p/hapus_data/<?= $pxak['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -138,7 +138,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="kelas_x_an" role="tabpanel" aria-labelledby="kelas_x_an_tab">
+                        <div class="tab-pane fade" id="kelas_xi_an" role="tabpanel" aria-labelledby="kelas_xi_an_tab">
                             <table id="an" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -154,22 +154,22 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($peserta_x_an as $pxa) { ?>
+                                    foreach ($peserta_xi_an as $pxa) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($pxa['nama']) ?></td>
                                             <td><?= esc($pxa['kelas']) ?></td>
                                             <td>
                                                 <?= esc($pxa['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasX<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxa['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxa['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <a href="/pengawas/hapus_data/<?= $pxa['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -180,7 +180,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="kelas_x_tjkt" role="tabpanel" aria-labelledby="kelas_x_tjkt_tab">
+                        <div class="tab-pane fade" id="kelas_xi_tjkt" role="tabpanel" aria-labelledby="kelas_xi_tjkt_tab">
                             <table id="tjkt" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -196,22 +196,22 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($peserta_x_tjkt as $pxt) { ?>
+                                    foreach ($peserta_xi_tjkt as $pxt) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($pxt['nama']) ?></td>
                                             <td><?= esc($pxt['kelas']) ?></td>
                                             <td>
                                                 <?= esc($pxt['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasX<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxt['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxt['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <a href="/pengawas/hapus_data/<?= $pxt['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -222,7 +222,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="kelas_x_dkv" role="tabpanel" aria-labelledby="kelas_x_dkv_tab">
+                        <div class="tab-pane fade" id="kelas_xi_dkv" role="tabpanel" aria-labelledby="kelas_xi_dkv_tab">
                             <table id="dkv" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -238,22 +238,22 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($peserta_x_dkv as $pxd) { ?>
+                                    foreach ($peserta_xi_dkv as $pxd) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($pxd['nama']) ?></td>
                                             <td><?= esc($pxd['kelas']) ?></td>
                                             <td>
                                                 <?= esc($pxd['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasX<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxd['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxd['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <a href="/pengawas/hapus_data/<?= $pxd['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -264,7 +264,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="kelas_x_bp" role="tabpanel" aria-labelledby="kelas_x_bp_tab">
+                        <div class="tab-pane fade" id="kelas_xi_bp" role="tabpanel" aria-labelledby="kelas_xi_bp_tab">
                             <table id="bp" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -280,22 +280,22 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($peserta_x_bp as $pxb) { ?>
+                                    foreach ($peserta_xi_bp as $pxb) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($pxb['nama']) ?></td>
                                             <td><?= esc($pxb['kelas']) ?></td>
                                             <td>
                                                 <?= esc($pxb['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasX<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxb['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxb['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <a href="/pengawas/hapus_data/<?= $pxb['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -306,7 +306,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="kelas_x_pplg" role="tabpanel" aria-labelledby="kelas_x_pplg_tab">
+                        <div class="tab-pane fade" id="kelas_xi_pplg" role="tabpanel" aria-labelledby="kelas_xi_pplg_tab">
                             <table id="pplg" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -322,22 +322,22 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($peserta_x_pplg as $pxp) { ?>
+                                    foreach ($peserta_xi_pplg as $pxp) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($pxp['nama']) ?></td>
                                             <td><?= esc($pxp['kelas']) ?></td>
                                             <td>
                                                 <?= esc($pxp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasX<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <a href="/pengawas/hapus_data/<?= $pxp['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -350,14 +350,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.card -->
             </div>
-
             <!-- /.row -->
         </div><!-- /.container-fluid -->
+
         <?php
-        foreach ($peserta_x as $px) { ?>
-            <div class="modal fade" id="editRuanganKelasX<?= $px['id_peserta'] ?>" tabindex="-1" aria-labelledby="editRuangan" aria-hidden="true">
+        foreach ($peserta_xi as $px) { ?>
+            <div class="modal fade" id="editRuanganKelasXI<?= $px['id_peserta'] ?>" tabindex="-1" aria-labelledby="editRuangan" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -367,7 +366,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/ruangan/' . $px['id_peserta']) . '/kelas_x' ?>" method="post">
+                            <form action="<?= site_url('/peserta/edit/ruangan/' . $px['id_peserta']) . '/kelas_xi' ?>" method="post">
                                 <div class="pb-2">
                                     <label for="Ruangan" class="col-form-label">Ruangan</label>
                                     <select name="ruangan" id="Ruangan" class="form-control">
@@ -389,8 +388,8 @@
         <?php }
         ?>
         <?php
-        foreach ($peserta_x as $px) { ?>
-            <div class="modal fade" id="editLegitimasiTeoriKelasX<?= $px['id_peserta'] ?>" tabindex="-1" aria-labelledby="editLegitimasiTeori" aria-hidden="true">
+        foreach ($peserta_xi as $px) { ?>
+            <div class="modal fade" id="editLegitimasiTeoriKelasXI<?= $px['id_peserta'] ?>" tabindex="-1" aria-labelledby="editLegitimasiTeori" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -400,7 +399,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/legitimasi_teori/' . $px['id_peserta']) . '/kelas_x' ?>" method="post">
+                            <form action="<?= site_url('/peserta/edit/legitimasi_teori/' . $px['id_peserta']) . '/kelas_xi' ?>" method="post">
                                 <?= csrf_field() ?>
                                 <div class="pb-2">
                                     <label for="legitimasiTeori" class="col-form-label">Legitimasi Teori</label>
@@ -420,8 +419,8 @@
         <?php } ?>
 
         <?php
-        foreach ($peserta_x as $px) { ?>
-            <div class="modal fade" id="editLegitimasiProjekKelasX<?= $px['id_peserta'] ?>" tabindex="-1" aria-labelledby="editLegitimasiProjek" aria-hidden="true">
+        foreach ($peserta_xi as $px) { ?>
+            <div class="modal fade" id="editLegitimasiProjekKelasXI<?= $px['id_peserta'] ?>" tabindex="-1" aria-labelledby="editLegitimasiProjek" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -431,7 +430,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/legitimasi_projek/' . $px['id_peserta']) . '/kelas_x' ?>" method="post">
+                            <form action="<?= site_url('/peserta/edit/legitimasi_projek/' . $px['id_peserta']) . '/kelas_xi' ?>" method="post">
                                 <?= csrf_field() ?>
                                 <div class="pb-2">
                                     <label for="legitimasiProjek" class="col-form-label">Legitimasi Projek</label>
@@ -448,7 +447,6 @@
                 </div>
             </div>
         <?php } ?>
-
 
     </div>
     <!-- /.content -->

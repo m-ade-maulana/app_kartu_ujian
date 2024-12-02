@@ -29,47 +29,45 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Login::index');
-$routes->get('/login/page/pengawas', 'Login::login_page_pengawas/');
-$routes->add('/login/pengawas', 'Login::login_pengawas/');
-$routes->add('/login/admin', 'Login::login_admin/');
-$routes->add('/cek_peserta/kartu', 'Login::cek_peserta/');
-$routes->add('/logout', 'Login::logout');
-$routes->add('/logout_peserta', 'Login::logout_peserta');
 
-// Home
-$routes->get('/home', 'Home::index');
+// Login Sistem
+$routes->get('/', 'Login::index');
+$routes->get('/login/pengawas', 'Login::login_page_pengawas/');
+$routes->get('/login/peserta', 'Login::login_page_peserta/');
+$routes->add('/login/admin/proses', 'Login::login_proses_admin');
+$routes->add('/login/pengawas/proses', 'Login::login_proses_pengawas');
+$routes->add('/login/peserta/proses', 'Login::cek_peserta');
+$routes->get('/logout', 'Login::logout');
+$routes->get('/logout_peserta', 'Login::logout_peserta');
+
+// Admin
+$routes->get('/admin', 'Admin::index');
+$routes->get('/admin/data-peserta/kelas-x', 'Admin::peserta_kelas_x');
+$routes->get('/admin/data-peserta/kelas-xi', 'Admin::peserta_kelas_xi');
+$routes->get('/admin/data-peserta/kelas-xii', 'Admin::peserta_kelas_xii');
+$routes->get('/admin/cetak_legitimasi', 'Admin::cetak_legitimasi');
+$routes->get('/admin/data-pengawas', 'Admin::pengawas');
+$routes->get('/admin/jadwal-ujian', 'Admin::jadwal_ujian');
+$routes->get('/admin/cetak-legitimasi-projek/(:any)', 'Admin::cetak_kartu_legitimasi_projek/$1');
+$routes->get('/admin/cetak-legitimasi-teori/(:any)', 'Admin::cetak_kartu_legitimasi_teori/$1');
+
+// Admin/Insert-Fitur
+$routes->post('/admin/jadwal-ujian/insert', 'Admin::insert_jadwal_ujian');
+$routes->post('/admin/pengawas/insert', 'Admin::insert_pengawas');
+
+// Admin/Update-Fitur
+$routes->put('/admin/data-peserta/update/(:any)/ruang/kelas_x', 'Admin::update_ruang_kelas_x/$1');
+$routes->put('/admin/data-peserta/update/(:any)/ruang/kelas_xi', 'Admin::update_ruang_kelas_xi/$1');
+$routes->put('/admin/data-peserta/update/(:any)/ruang/kelas_xii', 'Admin::update_ruang_kelas_xii/$1');
+
+// Admin/Delete-Fitur
+$routes->get('/admin/pengawas/delete/(:any)', 'Admin::delete_pengawas/$1');
 
 // Peserta
-$routes->get('/peserta/kelas_x', 'Peserta::kelas_x');
-$routes->get('/peserta/kelas_xi', 'Peserta::kelas_xi');
-$routes->get('/peserta/kelas_xii', 'Peserta::kelas_xii');
-$routes->add('/peserta/edit/ruangan/(:any)/kelas_x', 'Peserta::edit_kelas_x/$1');
-$routes->add('/peserta/edit/legitimasi_projek/(:any)/kelas_x', 'Peserta::edit_kelas_x/$1');
-$routes->add('/peserta/edit/legitimasi_teori/(:any)/kelas_x', 'Peserta::edit_kelas_x/$1');
-
-// Halaman Peserta
-$routes->get('/cek_peserta', 'Peserta::cek_peserta');
-$routes->get('/kartu_peserta', 'Peserta::kartu_peserta');
-$routes->get('/cetak_kartu_legitimasi_projek', 'Peserta::cetak_kartu_legitimasi_projek');
-
-$routes->add('/peserta/edit/ruangan/(:any)/kelas_xi', 'Peserta::edit_kelas_xi/$1');
-$routes->add('/peserta/edit/legitimasi_projek/(:num)/kelas_xi', 'Peserta::edit_kelas_xi/$1');
-$routes->add('/peserta/edit/legitimasi_teori/(:num)/kelas_xi', 'Peserta::edit_kelas_xi/$1');
-
-$routes->add('/peserta/edit/ruangan/(:any)/kelas_xii', 'Peserta::edit_kelas_xii/$1');
-$routes->add('/peserta/edit/legitimasi_projek/(:num)/kelas_xii', 'Peserta::edit_kelas_xii/$1');
-$routes->add('/peserta/edit/legitimasi_teori/(:num)/kelas_xii', 'Peserta::edit_kelas_xii/$1');
-
-// Pengawas
-$routes->get('/pengawas', 'Pengawas::index');
-$routes->get('/pengawas/ruangan', 'Pengawas::ruangan_pengawas');
-$routes->add('/pengawas/tambah', 'Pengawas::insert_pengawas');
-$routes->add('/pengawas/hapus_data/(:num)', 'Pengawas::delete_data/$1');
-
-// Jadwal Ujian
-$routes->get('/jadwal_ujian', 'Jadwal::index');
-$routes->add('/jadwal_ujian/tambah', 'Jadwal::insert_mapel_ujian');
+$routes->get('/peserta/cek-kartu', 'Peserta::index');
+$routes->add('/peserta/kartu-peserta', 'Peserta::kartu_peserta');
+$routes->add('/peserta/kartu-peserta/legitimmasi-projek', 'Peserta::cetak_kartu_legitimasi_projek');
+$routes->add('/peserta/kartu-peserta/legitimmasi-teori', 'Peserta::cetak_kartu_legitimasi_teori');
 
 /*
  * --------------------------------------------------------------------

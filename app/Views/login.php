@@ -11,7 +11,7 @@
         <div class="card-body login-card-body">
             <p class="login-box-msg">Login dulu</p>
 
-            <form action="<?= site_url('/login/admin') ?>" method="post">
+            <form action="<?= site_url('/login/admin/proses') ?>" method="post">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Username" name="username">
                     <div class="input-group-append">

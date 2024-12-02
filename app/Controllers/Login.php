@@ -2,37 +2,33 @@
 
 namespace App\Controllers;
 
-use App\Models\PengawasModel;
-use App\Models\SessionModel;
-
 class Login extends BaseController
 {
+    // Login Admin
     public function index()
     {
         return view('login');
     }
 
+    // Login Pengawas
     public function login_page_pengawas()
     {
         return view('login_pengawas');
     }
 
-    public function login_admin()
+    // Login Pengawas
+    public function login_page_peserta()
     {
-        // $modal2 = new PesertaModel();
-        // $this->model = new SessionModel();
+        return view('peserta/cek-peserta');
+    }
 
-        // var_dump($get_kode_pengawas);
+    // Proses login admin
+    public function login_proses_admin()
+    {
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        // $data = $this->model2->login_pengawas($kode_pengawas);
         $data = $this->session_model->where(['username' => $username])->get()->getRowArray();
-        // var_dump($data['password']);
-
-        // if ($data['username'] == $username) {
-        //     echo $username;
-        // }
 
         if ($data['username'] == $username) {
             if ($data['password'] == $password) {
@@ -40,12 +36,13 @@ class Login extends BaseController
                     # code...
                     $data_login = [
                         'nama' => $data['nama'],
+                        'username' => $data['username'],
                         'role' => $data['role'],
                         'logged_in' => TRUE
                     ];
                     alert_swal('success', 'Berhasil Login', 'Selamat Datang');
                     session()->set($data_login);
-                    return redirect()->to('/home');
+                    return redirect()->to('/admin');
                 } else {
                     alert_swal('error', 'Gagal', 'Periksa Username dan Password Anda');
                     return redirect()->to('/');
@@ -53,29 +50,15 @@ class Login extends BaseController
             } else {
                 alert_swal('error', 'Gagal', 'Periksa Username dan Password Anda');
                 return redirect()->to('/');
-                // return redirect()->back();
             }
         } else {
             alert_swal('error', 'Gagal', 'Periksa Username dan Password Anda');
-            // return redirect()->back();
             return redirect()->to('/');
         }
-
-        // if (!$data) {
-        //     session()->setFlashdata('error', 'Kode pengawas salah');
-        //     return redirect()->back();
-        // } else {
-        //     $dataPengawas = [
-        //         'nama' => $data['nama'],
-        //         'kode_pengawas' => $data['kode_pengawas'],
-        //         'logged_in' => TRUE
-        //     ];
-        //     session()->set($dataPengawas);
-        //     return redirect()->to('/pengawas');
-        // }
     }
 
-    public function login_pengawas()
+    // Proses login pengawas
+    public function login_proses_pengawas()
     {
         $kode_pengawas = $this->request->getPost('kode_pengawas');
 
@@ -99,16 +82,17 @@ class Login extends BaseController
             ];
             alert_swal('success', 'Sukses', 'Selamat Datang ' . $data['nama']);
             session()->set($dataPengawas);
-            return redirect()->to('/home');
+            return redirect()->to('/pengawas');
         }
     }
 
+    // Halaman cek peserta
     public function cek_peserta()
     {
         $nis = $this->request->getPost('nis');
 
         // $data = $this->model2->login_pengawas($kode_pengawas);
-        $data = $this->peserta_model->where(['nis' => $nis])->first();
+        $data = $this->peserta_model->where(['nis' => $nis])->get()->getRowArray();
         // echo $kode_pengawas;
 
         if (!$data) {
@@ -124,14 +108,17 @@ class Login extends BaseController
                 'ruangan' => $data['ruangan'],
                 'foto' => $data['foto'],
                 'legitimasi_projek' => $data['legitimasi_projek'],
-                'legitimasi_teori' => $data['legitimasi_teori']
+                'legitimasi_teori' => $data['legitimasi_teori'],
+                'logged_in' => TRUE
             ];
             alert_swal('success', 'Sukses', 'Selamat Datang ' . $data['nama']);
             session()->set($data_peserta);
-            return redirect()->to('/kartu_peserta');
+            return redirect()->to('/peserta/kartu-peserta');
         }
+        // var_dump($nis);
     }
 
+    // Logout
     public function logout()
     {
         alert_swal('success', 'Sukses', 'Anda telah logout');
@@ -139,10 +126,11 @@ class Login extends BaseController
         return redirect()->to('/');
     }
 
+    // Logout Peserta
     public function logout_peserta()
     {
         alert_swal('success', 'Sukses', 'Anda telah logout');
         session()->destroy();
-        return redirect()->to('/cek_peserta');
+        return redirect()->to('/login/peserta');
     }
 }

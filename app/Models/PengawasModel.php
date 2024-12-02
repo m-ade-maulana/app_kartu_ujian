@@ -8,7 +8,7 @@ class PengawasModel extends Model
 {
     protected $table = 'data_pengawas';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['kode_pengawas', 'nama', 'ruangan_hari_pertama', 'tanggal_hari_pertama', 'ruangan_hari_kedua', 'tanggal_hari_kedua']; // Tambahkan kolom yang ingin diizinkan untuk diinsert/update
+    protected $allowedFields = ['kode_pengawas', 'nama', 'ruangan_pertama', 'tanggal_mengawas', 'ruangan_kedua']; // Tambahkan kolom yang ingin diizinkan untuk diinsert/update
 
     protected $useTimeStamps = true;
     protected $createdField  = 'created_at';

@@ -1,4 +1,4 @@
-<?= $this->extend('admin/layout/main') ?>
+<?= $this->extend('pengawas/layout/main') ?>
 <?= $this->section('content') ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -25,7 +25,9 @@
         <div class="container-fluid">
             <div class="p-5 mb-4 bg-white rounded elevation-4">
                 <div class="container py-4">
-                    <h1 class="fw-bold">Fiturnya masih dikembangin SABAR YAAAA!!!!!!</h1>
+                    <h1 class="fw-bold">Selamat Datang</h1>
+                    <p class="col-md-8 fs-4"><b>SIKU</b> adalah sistem informasi kartu ujian yang digunakan peserta ujian untuk mengetahui jadwal ujian siswa dan mencetak kartu ujian siswa</p>
+                    <button class="btn btn-secondary btn-lg" type="button">Lihat Data Peserta</button>
                 </div>
             </div>
 

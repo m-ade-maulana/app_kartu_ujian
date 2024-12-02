@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('admin/layout/main') ?>
 
 <?= $this->section('content') ?>
 
@@ -406,8 +406,8 @@
                                     <label for="legitimasiTeori" class="col-form-label">Legitimasi Teori</label>
                                     <select name="legitimasi_teori" id="legitimasiTeori" class="form-control">
                                         <option value="">Pilih Status</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
 
                                     </select>
                                 </div>
@@ -437,8 +437,8 @@
                                     <label for="legitimasiProjek" class="col-form-label">Legitimasi Projek</label>
                                     <select name="legitimasi_projek" id="legitimasiProjek" class="form-control">
                                         <option value="">Pilih Status</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-md btn-block mt-2">Submit</button>

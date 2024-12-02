@@ -14,22 +14,16 @@ class Pengawas extends BaseController
 
     public function index()
     {
-        if (!$this->isLoginTrue()) {
-            return redirect()->to('/');
-        }
-
-        $db = \config\Database::connect();
-
         $data['link'] = $this->link_model->getAllLink();
         $data['data_pengawas'] = $this->pengawas_model->findAll();
 
         // Builder data guru
-        $builder = $db->query('SELECT * FROM data_guru');
+        $builder = $this->db->query('SELECT * FROM data_guru');
         $data['guru'] = $builder->getResult('array');
 
         $data['nama'] = session()->get('nama');
 
-        return view('pages/pengawas', $data);
+        return view('pengawas/home', $data);
     }
 
     public function ruangan_pengawas()
@@ -111,13 +105,6 @@ class Pengawas extends BaseController
         }
         return false;
     }
-
-    // public function get_session()
-    // {
-    //     if (condition) {
-    //         # code...
-    //     }
-    // }
 }
 
 

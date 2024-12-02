@@ -64,6 +64,7 @@
                                         <th>Ruangan</th>
                                         <th>Legitimasi Projek</th>
                                         <th>Legitiasi SAS Teori</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,6 +87,9 @@
                                                 <?= esc($pxmp['legitimasi_teori']) ?>
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
+                                            <td>
+                                                <a href="/peserta.p/hapus_data/<?= $pxmp['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                            </td>
                                         </tr>
                                     <?php }
                                     ?>
@@ -102,6 +106,7 @@
                                         <th>Ruangan</th>
                                         <th>Legitimasi Projek</th>
                                         <th>Legitiasi SAS Teori</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -113,16 +118,19 @@
                                             <td><?= esc($pxak['nama']) ?></td>
                                             <td><?= esc($pxak['kelas']) ?></td>
                                             <td>
-                                                <?= esc($pxmp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxak['ruangan']) ?> |
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxak['legitimasi_projek']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxak['legitimasi_teori']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/peserta.p/hapus_data/<?= $pxak['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -140,6 +148,7 @@
                                         <th>Ruangan</th>
                                         <th>Legitimasi Projek</th>
                                         <th>Legitiasi SAS Teori</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -151,16 +160,19 @@
                                             <td><?= esc($pxa['nama']) ?></td>
                                             <td><?= esc($pxa['kelas']) ?></td>
                                             <td>
-                                                <?= esc($pxmp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxa['ruangan']) ?> |
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxa['legitimasi_projek']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxa['legitimasi_teori']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/pengawas/hapus_data/<?= $pxa['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -178,6 +190,7 @@
                                         <th>Ruangan</th>
                                         <th>Legitimasi Projek</th>
                                         <th>Legitiasi SAS Teori</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -189,16 +202,19 @@
                                             <td><?= esc($pxt['nama']) ?></td>
                                             <td><?= esc($pxt['kelas']) ?></td>
                                             <td>
-                                                <?= esc($pxmp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxt['ruangan']) ?> |
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxt['legitimasi_projek']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxt['legitimasi_teori']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/pengawas/hapus_data/<?= $pxt['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -216,6 +232,7 @@
                                         <th>Ruangan</th>
                                         <th>Legitimasi Projek</th>
                                         <th>Legitiasi SAS Teori</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -227,16 +244,19 @@
                                             <td><?= esc($pxd['nama']) ?></td>
                                             <td><?= esc($pxd['kelas']) ?></td>
                                             <td>
-                                                <?= esc($pxmp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxd['ruangan']) ?> |
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxd['legitimasi_projek']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxd['legitimasi_teori']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/pengawas/hapus_data/<?= $pxd['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -254,6 +274,7 @@
                                         <th>Ruangan</th>
                                         <th>Legitimasi Projek</th>
                                         <th>Legitiasi SAS Teori</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -265,16 +286,19 @@
                                             <td><?= esc($pxb['nama']) ?></td>
                                             <td><?= esc($pxb['kelas']) ?></td>
                                             <td>
-                                                <?= esc($pxmp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxb['ruangan']) ?> |
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxb['legitimasi_projek']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxb['legitimasi_teori']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/pengawas/hapus_data/<?= $pxb['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -292,6 +316,7 @@
                                         <th>Ruangan</th>
                                         <th>Legitimasi Projek</th>
                                         <th>Legitiasi SAS Teori</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -303,16 +328,19 @@
                                             <td><?= esc($pxp['nama']) ?></td>
                                             <td><?= esc($pxp['kelas']) ?></td>
                                             <td>
-                                                <?= esc($pxmp['ruangan']) ?> |
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxp['ruangan']) ?> |
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editRuanganKelasXII<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxp['legitimasi_projek']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasXII<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <?= esc($pxmp['legitimasi_teori']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <?= esc($pxp['legitimasi_teori']) ?>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasXII<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/pengawas/hapus_data/<?= $pxp['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
