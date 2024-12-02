@@ -250,10 +250,10 @@ class Admin extends BaseController
                 $insert = $this->jadwal_model->insert($data);
                 if ($insert) {
                     alert_swal('success', 'Suksess', 'Mata pelajaran berhasil ditambahkan');
-                    return redirect()->to('admin/jadwal_ujian');
+                    return redirect()->to('/admin/jadwal_ujian');
                 } else {
                     alert_swal('error', 'Suksess', 'Mata Pelajaran tidak berhasil ditambahkan');
-                    return redirect()->to('admin/jadwal_ujian');
+                    return redirect()->to('/admin/jadwal_ujian');
                 }
             }
         }
