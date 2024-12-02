@@ -16,6 +16,6 @@ class Pdfgenerator
         $dompdf->loadHtml($html);
         $dompdf->setPaper($paper, 'portrait');
         $dompdf->render();
-        $dompdf->stream($filename . ".pdf", ['Attachment' => false]);
+        $dompdf->stream($filename . ".pdf", ['Attachment' => true]);
     }
 }

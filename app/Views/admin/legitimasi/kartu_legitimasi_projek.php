@@ -161,11 +161,8 @@
                     <tr>
                         <td style="vertical-align: middle; padding-left: 10px;">
                             <p>Kepala Sekolah</p>
-                            <img style="margin-left: 50px;" src="<?= $ttd ?>" alt="" width="30">
+                            <img src="<?= $barcode_validasi ?>" alt="" width="100">
                             <p>Sugiharti Soumifitri, M.Pd</p>
-                        </td>
-                        <td style="vertical-align: middle;">
-                            <img style="float: right; margin-top: 25px" src="<?= $barcode ?>" alt="" width="100">
                         </td>
                     </tr>
                 </tbody>

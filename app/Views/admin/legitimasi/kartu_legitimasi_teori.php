@@ -190,13 +190,10 @@
                 style="border-collapse: collapse; width: 100%; margin-bottom: 1rem; color: #212529; background-color: transparent;">
                 <tbody>
                     <tr>
-                        <td style="padding-left: 10px;">
+                        <td style="vertical-align: middle; padding-left: 10px;">
                             <p>Kepala Sekolah</p>
-                            <img style="margin-left: 50px;" src="<?= $ttd ?>" alt="" width="40">
+                            <img src="<?= $barcode_validasi ?>" alt="" width="100">
                             <p>Sugiharti Soumifitri, M.Pd</p>
-                        </td>
-                        <td style="vertical-align: middle;">
-                            <img style="float: right; margin-top: 25px" src="<?= $barcode ?>" alt="" width="150">
                         </td>
                     </tr>
                 </tbody>

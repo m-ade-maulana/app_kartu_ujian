@@ -283,10 +283,6 @@ class Admin extends BaseController
         $html = view('admin/legitimasi/kartu_legitimasi_projek', $data);
 
         return $this->pdfgenerator->generate($html, $file_pdf, $paper);
-
-        // return view('message');
-        // return view('admin/legitimasi/kartu_legitimasi_projek', $data);
-        // var_dump($data);
     }
 
     public function cetak_kartu_legitimasi_teori($nis)
