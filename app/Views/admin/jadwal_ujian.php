@@ -83,11 +83,11 @@
                                 <select name="nama_mapel" id="namaMapel" class="form-control">
                                     <option value="">Pilih Nama Mata Pelajaran</option>
                                     <option value="Bahasa Indonesia">Bahasa Indonesia</option>
-                                    <option value="Matematika">Matematika</option>
                                     <option value="PAI">PAI</option>
                                     <option value="Seni Budaya">Seni Budaya</option>
-                                    <option value="Bahasa Inggris">Bahasa Inggris</option>
                                     <option value="Sejarah Indonesia">Sejarah Indonesia</option>
+                                    <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+                                    <option value="Pend. Pancasiladan Kewarganegaraan">Pend. Pancasila dan Kewarganegaraan</option>
                                 </select>
                             </div>
                             <div class="pb-2">
