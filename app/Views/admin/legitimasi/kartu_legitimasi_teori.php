@@ -33,8 +33,8 @@
                                     src="<?= $user ?>"
                                     style="margin-top: 20px; margin-left: 10px; margin-right: 10px"
                                     alt=""
-                                    width="150"
-                                    height="150" />
+                                    width="100"
+                                    height="100" />
                             </td>
                             <td style="padding-left: 10px;">Nama</td>
                             <td style="padding-left: 10px;"><?= $p['nama'] ?></td>

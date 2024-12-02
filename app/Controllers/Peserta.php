@@ -36,11 +36,10 @@ class Peserta extends BaseController
         $data['legitimasi_projek'] = session()->get('legitimasi_projek');
         $data['legitimasi_teori'] = session()->get('legitimasi_teori');
 
+        // $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
         $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
-        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/' . session()->get('foto'));
+        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
         $data['barcode_validasi'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode-validasi.png');
-
-        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.gif');
 
         $data['style'] = file_get_contents(ROOTPATH . '/public/assets/css/adminlte.css');
 
@@ -67,10 +66,11 @@ class Peserta extends BaseController
         $data['foto'] = session()->get('foto');
         $data['legitimasi_projek'] = session()->get('legitimasi_projek');
         $data['legitimasi_teori'] = session()->get('legitimasi_teori');
+
+        // $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
         $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
         $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
         $data['barcode_validasi'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode-validasi.png');
-        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.jpg');
 
         $nama = session()->get('nama');
         $nis = session()->get('nis');

@@ -270,10 +270,10 @@ class Admin extends BaseController
         // $data['peserta'] = $this->peserta_model->getByData('nis', $nis);
         $data['peserta'] = $this->peserta_model->where('nis', $nis)->findAll();
 
-        $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
+        // $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
         $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
-        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/avatar.jpg');
-        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.gif');
+        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
+        $data['barcode_validasi'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode-validasi.png');
 
         $data['style'] = file_get_contents(ROOTPATH . '/public/assets/css/adminlte.css');
 
@@ -289,10 +289,10 @@ class Admin extends BaseController
     {
         $data['peserta'] = $this->peserta_model->where('nis', $nis)->findAll();
 
-        $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
+        // $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
         $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
-        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/avatar.jpg');
-        $data['barcode'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode.gif');
+        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
+        $data['barcode_validasi'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode-validasi.png');
 
         $data['style'] = file_get_contents(ROOTPATH . '/public/assets/css/adminlte.css');
 
