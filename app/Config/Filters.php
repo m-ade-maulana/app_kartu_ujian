@@ -9,6 +9,8 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\LoginFilter;
+use App\Filters\LoginPengawasFilter;
+use App\Filters\LoginPesertaFilter;
 
 class Filters extends BaseConfig
 {
@@ -23,6 +25,8 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'loginFilter'   => LoginFilter::class,
+        'loginPengawasFilter' => LoginPengawasFilter::class,
+        'loginPesertaFilter' => LoginPesertaFilter::class
     ];
 
     /**
@@ -66,6 +70,14 @@ class Filters extends BaseConfig
         'loginFilter' => [
             'before' => ['admin/*'],
             'after' => ['/'],
-        ]
+        ],
+        'loginPengawasFilter' => [
+            'before' => ['pengawas/*'],
+            'after' => ['/login/pengawas'],
+        ],
+        'loginPesertaFilter' => [
+            'before' => ['peserta/*'],
+            'after' => ['/login/peserta'],
+        ],
     ];
 }

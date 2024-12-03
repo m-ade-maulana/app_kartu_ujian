@@ -130,7 +130,7 @@
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="/peserta.p/hapus_data/<?= $pxak['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                                <a href="<?= site_url('/admin/peserta/delete/' . $pxmp['id_peserta']) ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -172,7 +172,7 @@
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="/pengawas/hapus_data/<?= $pxa['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                                <a href="<?= site_url('/admin/peserta/delete/' . $pxmp['id_peserta']) ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -214,7 +214,7 @@
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="/pengawas/hapus_data/<?= $pxt['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                                <a href="<?= site_url('/admin/peserta/delete/' . $pxmp['id_peserta']) ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -256,7 +256,7 @@
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="/pengawas/hapus_data/<?= $pxd['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                                <a href="<?= site_url('/admin/peserta/delete/' . $pxmp['id_peserta']) ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -298,7 +298,7 @@
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="/pengawas/hapus_data/<?= $pxb['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                                <a href="<?= site_url('/admin/peserta/delete/' . $pxmp['id_peserta']) ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -340,7 +340,7 @@
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="/pengawas/hapus_data/<?= $pxp['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                                <a href="<?= site_url('/admin/peserta/delete/' . $pxmp['id_peserta']) ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
