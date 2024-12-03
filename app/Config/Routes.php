@@ -56,12 +56,21 @@ $routes->post('/admin/jadwal-ujian/insert', 'Admin::insert_jadwal_ujian');
 $routes->post('/admin/pengawas/insert', 'Admin::insert_pengawas');
 
 // Admin/Update-Fitur
-$routes->put('/admin/data-peserta/update/(:any)/ruang/kelas_x', 'Admin::update_ruang_kelas_x/$1');
-$routes->put('/admin/data-peserta/update/(:any)/ruang/kelas_xi', 'Admin::update_ruang_kelas_xi/$1');
-$routes->put('/admin/data-peserta/update/(:any)/ruang/kelas_xii', 'Admin::update_ruang_kelas_xii/$1');
+$routes->add('/admin/data-peserta/update/(:any)/ruang/kelas_x', 'Admin::update_ruang_kelas_x/$1');
+$routes->add('/admin/data-peserta/update/(:any)/ruang/kelas_xi', 'Admin::update_ruang_kelas_xi/$1');
+$routes->add('/admin/data-peserta/update/(:any)/ruang/kelas_xii', 'Admin::update_ruang_kelas_xii/$1');
+
+$routes->add('/admin/data-peserta/update/(:any)/legitimasi_projek/kelas_x', 'Admin::update_legitimasi_projek_kelas_x/$1');
+$routes->add('/admin/data-peserta/update/(:any)/legitimasi_projek/kelas_xi', 'Admin::update_legitimasi_projek_kelas_xi/$1');
+$routes->add('/admin/data-peserta/update/(:any)/legitimasi_projek/kelas_xii', 'Admin::update_legitimasi_projek_kelas_xii/$1');
+
+$routes->add('/admin/data-peserta/update/(:any)/legitimasi_teori/kelas_x', 'Admin::update_legitimasi_teori_kelas_x/$1');
+$routes->add('/admin/data-peserta/update/(:any)/legitimasi_teori/kelas_xi', 'Admin::update_legitimasi_teori_kelas_xi/$1');
+$routes->add('/admin/data-peserta/update/(:any)/legitimasi_teori/kelas_xii', 'Admin::update_legitimasi_teori_kelas_xii/$1');
 
 // Admin/Delete-Fitur
 $routes->get('/admin/pengawas/delete/(:any)', 'Admin::delete_pengawas/$1');
+$routes->get('/admin/peserta/delete/(:any)', 'Admin::delete_peserta/$1');
 
 // Peserta
 $routes->get('/peserta/cek-kartu', 'Peserta::index');

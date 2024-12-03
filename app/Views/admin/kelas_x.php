@@ -81,14 +81,14 @@
                                             </td>
                                             <td>
                                                 <?= esc($pxmp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasX<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxmp['legitimasi_teori']) ?>
                                                 <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxmp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="/peserta.p/hapus_data/<?= $pxmp['id_peserta'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                                <a href="<?= site_url('/admin/peserta/delete/' . $pxmp['id_peserta']) ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php }
@@ -123,7 +123,7 @@
                                             </td>
                                             <td>
                                                 <?= esc($pxak['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasX<?= $pxak['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxak['legitimasi_teori']) ?>
@@ -165,7 +165,7 @@
                                             </td>
                                             <td>
                                                 <?= esc($pxa['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasX<?= $pxa['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxa['legitimasi_teori']) ?>
@@ -207,7 +207,7 @@
                                             </td>
                                             <td>
                                                 <?= esc($pxt['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasX<?= $pxt['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxt['legitimasi_teori']) ?>
@@ -249,7 +249,7 @@
                                             </td>
                                             <td>
                                                 <?= esc($pxd['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasX<?= $pxd['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxd['legitimasi_teori']) ?>
@@ -291,7 +291,7 @@
                                             </td>
                                             <td>
                                                 <?= esc($pxb['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasX<?= $pxb['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxb['legitimasi_teori']) ?>
@@ -333,7 +333,7 @@
                                             </td>
                                             <td>
                                                 <?= esc($pxp['legitimasi_projek']) ?>
-                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiTeoriKelasX<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="badge badge-success" data-toggle="modal" data-target="#editLegitimasiProjekKelasX<?= $pxp['id_peserta'] ?>"><i class="fas fa-edit"></i></a>
                                             </td>
                                             <td>
                                                 <?= esc($pxp['legitimasi_teori']) ?>
@@ -367,7 +367,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/ruangan/' . $px['id_peserta']) . '/kelas_x' ?>" method="post">
+                            <form action="<?= site_url('/admin/data-peserta/update/' . $px['id_peserta'] . '/ruang/kelas_x') ?>" method="post">
                                 <div class="pb-2">
                                     <label for="Ruangan" class="col-form-label">Ruangan</label>
                                     <select name="ruangan" id="Ruangan" class="form-control">
@@ -400,14 +400,14 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/legitimasi_teori/' . $px['id_peserta']) . '/kelas_x' ?>" method="post">
+                            <form action="<?= site_url('/admin/data-peserta/update/' . $px['id_peserta'] . '/legitimasi_teori/kelas_x') ?>" method="post">
                                 <?= csrf_field() ?>
                                 <div class="pb-2">
                                     <label for="legitimasiTeori" class="col-form-label">Legitimasi Teori</label>
                                     <select name="legitimasi_teori" id="legitimasiTeori" class="form-control">
                                         <option value="">Pilih Status</option>
-                                        <option value="yes">Yes</option>
-                                        <option value="no">No</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
 
                                     </select>
                                 </div>
@@ -431,7 +431,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/legitimasi_projek/' . $px['id_peserta']) . '/kelas_x' ?>" method="post">
+                            <form action="<?= site_url('/admin/data-peserta/update/' . $px['id_peserta'] . '/legitimasi_projek/kelas_x') ?>" method="post">
                                 <?= csrf_field() ?>
                                 <div class="pb-2">
                                     <label for="legitimasiProjek" class="col-form-label">Legitimasi Projek</label>

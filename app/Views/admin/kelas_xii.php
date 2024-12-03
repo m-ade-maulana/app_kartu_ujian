@@ -365,7 +365,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/ruangan/' . $px['id_peserta']) . '/kelas_xii' ?>" method="post">
+                            <form action="<?= site_url('/admin/data-peserta/update/' . $px['id_peserta']) . '/ruang/kelas_xii' ?>" method="post">
                                 <div class="pb-2">
                                     <label for="Ruangan" class="col-form-label">Ruangan</label>
                                     <select name="ruangan" id="Ruangan" class="form-control">
@@ -398,7 +398,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/legitimasi_teori/' . $px['id_peserta']) . '/kelas_xii' ?>" method="post">
+                            <form action="<?= site_url('/admin/data-peserta/update/' . $px['id_peserta']) . '/legitimasi_teori/kelas_xii' ?>" method="post">
                                 <?= csrf_field() ?>
                                 <div class="pb-2">
                                     <label for="legitimasiTeori" class="col-form-label">Legitimasi Teori</label>
@@ -429,7 +429,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= site_url('/peserta/edit/legitimasi_projek/' . $px['id_peserta']) . '/kelas_xii' ?>" method="post">
+                            <form action="<?= site_url('/admin/data-peserta/update/' . $px['id_peserta']) . '/legitimasi_projek/kelas_xii' ?>" method="post">
                                 <?= csrf_field() ?>
                                 <div class="pb-2">
                                     <label for="legitimasiProjek" class="col-form-label">Legitimasi Projek</label>

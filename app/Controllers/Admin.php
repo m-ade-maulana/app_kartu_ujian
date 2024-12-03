@@ -103,27 +103,16 @@ class Admin extends BaseController
     public function update_ruang_kelas_x($id)
     {
         if ($this->request->getMethod()) {
-            if (uri_string() == 'peserta/edit/ruangan/' . $id . '/kelas_x') {
-                $data = [
-                    'ruangan' => $this->request->getPost('ruangan')
-                ];
-            } else if (uri_string() == 'peserta/edit/legitimasi_projek/' . $id . '/kelas_x') {
-                $data = [
-                    'legitimasi_projek' => $this->request->getPost('legitimasi_projek')
-                ];
-            } else if (uri_string() == 'peserta/edit/legitimasi_teori/' . $id . '/kelas_x') {
-                $data = [
-                    'legitimasi_teori' => $this->request->getPost('legitimasi_teori')
-                ];
-            }
-
+            $data = [
+                'ruangan' => $this->request->getPost('ruangan')
+            ];
             $update = $this->peserta_model->update($id, $data);
             if ($update) {
                 alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
-                return redirect()->to('/peserta/kelas_x');
+                return redirect()->to('/admin/data-peserta/kelas-x');
             } else {
                 alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
-                return redirect()->to('/peserta/kelas_x');
+                return redirect()->to('/admin/data-peserta/kelas-x');
             }
         }
     }
@@ -131,27 +120,17 @@ class Admin extends BaseController
     public function update_ruang_kelas_xi($id)
     {
         if ($this->request->getMethod()) {
-            if (uri_string() == 'peserta/edit/ruangan/' . $id . '/kelas_xi') {
-                $data = [
-                    'ruangan' => $this->request->getPost('ruangan')
-                ];
-            } else if (uri_string() == 'peserta/edit/legitimasi_projek/' . $id . '/kelas_xi') {
-                $data = [
-                    'legitimasi_projek' => $this->request->getPost('legitimasi_projek')
-                ];
-            } else if (uri_string() == 'peserta/edit/legitimasi_teori/' . $id . '/kelas_xi') {
-                $data = [
-                    'legitimasi_teori' => $this->request->getPost('legitimasi_teori')
-                ];
-            }
+            $data = [
+                'ruangan' => $this->request->getPost('ruangan')
+            ];
 
             $update = $this->peserta_model->update($id, $data);
             if ($update) {
                 alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
-                return redirect()->to('/peserta/kelas_xi');
+                return redirect()->to('/admin/data-peserta/kelas-xi');
             } else {
                 alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
-                return redirect()->to('/peserta/kelas_xi');
+                return redirect()->to('/admin/data-peserta/kelas-xi');
             }
         }
     }
@@ -159,27 +138,128 @@ class Admin extends BaseController
     public function update_ruang_kelas_xii($id)
     {
         if ($this->request->getMethod()) {
-            if (uri_string() == 'peserta/edit/ruangan/' . $id . '/kelas_xii') {
-                $data = [
-                    'ruangan' => $this->request->getPost('ruangan')
-                ];
-            } else if (uri_string() == 'peserta/edit/legitimasi_projek/' . $id . '/kelas_xii') {
-                $data = [
-                    'legitimasi_projek' => $this->request->getPost('legitimasi_projek')
-                ];
-            } else if (uri_string() == 'peserta/edit/legitimasi_teori/' . $id . '/kelas_xii') {
-                $data = [
-                    'legitimasi_teori' => $this->request->getPost('legitimasi_teori')
-                ];
-            }
+            $data = [
+                'ruangan' => $this->request->getPost('ruangan')
+            ];
 
             $update = $this->peserta_model->update($id, $data);
             if ($update) {
                 alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
-                return redirect()->to('/peserta/kelas_xii');
+                return redirect()->to('/admin/data-peserta/kelas-xii');
             } else {
                 alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
-                return redirect()->to('/peserta/kelas_xii');
+                return redirect()->to('/admin/data-peserta/kelas-xii');
+            }
+        }
+    }
+
+    public function update_legitimasi_projek_kelas_x($id)
+    {
+        if ($this->request->getMethod()) {
+            $data = [
+                'legitimasi_projek' => $this->request->getPost('legitimasi_projek')
+            ];
+
+
+            $update = $this->peserta_model->update($id, $data);
+            if ($update) {
+                alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-x');
+            } else {
+                alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-x');
+            }
+        }
+        // var_dump($data);
+    }
+
+    public function update_legitimasi_projek_kelas_xi($id)
+    {
+        if ($this->request->getMethod()) {
+            $data = [
+                'legitimasi_projek' => $this->request->getPost('legitimasi_projek')
+            ];
+
+            $update = $this->peserta_model->update($id, $data);
+            if ($update) {
+                alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xi');
+            } else {
+                alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xi');
+            }
+            // var_dump($data);
+        }
+    }
+
+    public function update_legitimasi_projek_kelas_xii($id)
+    {
+        if ($this->request->getMethod()) {
+            $data = [
+                'legitimasi_projek' => $this->request->getPost('legitimasi_projek')
+            ];
+
+            $update = $this->peserta_model->update($id, $data);
+            if ($update) {
+                alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xii');
+            } else {
+                alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xii');
+            }
+        }
+    }
+
+    public function update_legitimasi_teori_kelas_x($id)
+    {
+        if ($this->request->getMethod()) {
+            $data = [
+                'legitimasi_teori' => $this->request->getPost('legitimasi_teori')
+            ];
+
+            $update = $this->peserta_model->update($id, $data);
+            if ($update) {
+                alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-x');
+            } else {
+                alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-x');
+            }
+        }
+    }
+
+    public function update_legitimasi_teori_kelas_xi($id)
+    {
+        if ($this->request->getMethod()) {
+            $data = [
+                'legitimasi_teori' => $this->request->getPost('legitimasi_teori')
+            ];
+
+            $update = $this->peserta_model->update($id, $data);
+            if ($update) {
+                alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xi');
+            } else {
+                alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xi');
+            }
+        }
+    }
+
+    public function update_legitimasi_teori_kelas_xii($id)
+    {
+        if ($this->request->getMethod()) {
+            $data = [
+                'legitimasi_teori' => $this->request->getPost('legitimasi_teori')
+            ];
+
+            $update = $this->peserta_model->update($id, $data);
+            if ($update) {
+                alert_swal('success', 'Suksess', 'Data peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xii');
+            } else {
+                alert_swal('error', 'Suksess', 'Data tidak peserta berhasil diubah');
+                return redirect()->to('/admin/data-peserta/kelas-xii');
             }
         }
     }
@@ -318,6 +398,18 @@ class Admin extends BaseController
     public function delete_pengawas($id)
     {
         $delete = $this->pengawas_model->delete($id);
+        if ($delete) {
+            alert_swal('success', 'Suksess', 'Data berhasil di hapus');
+            return redirect()->to('/admin/data-pengawas');
+        } else {
+            alert_swal('error', 'Gagal', 'Data tidak berhasil di hapus');
+            return redirect()->to('/admin/data-pengawas');
+        }
+    }
+
+    public function delete_peserta($id)
+    {
+        $delete = $this->peserta_model->delete($id);
         if ($delete) {
             alert_swal('success', 'Suksess', 'Data berhasil di hapus');
             return redirect()->to('/admin/data-pengawas');
