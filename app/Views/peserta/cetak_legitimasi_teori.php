@@ -25,70 +25,64 @@
                 id="data-diri"
                 class="table table-bordered" style="border-collapse: collapse; width: 100%; margin-bottom: 1rem; color: #212529; background-color: transparent; " border="1">
                 <tbody>
-                    <?php
-                    foreach ($peserta as $p) { ?>
-                        <tr>
-                            <td rowspan="5" style="width: 100px;">
-                                <img
-                                    src="<?= $user ?>"
-                                    style="margin-top: 20px; margin-left: 10px; margin-right: 10px"
-                                    alt=""
-                                    width="100"
-                                    height="100" />
-                            </td>
-                            <td style="padding-left: 10px;">Nama</td>
-                            <td style="padding-left: 10px;"><?= $p['nama'] ?></td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 10px;">Kelas</td>
-                            <td style="padding-left: 10px;"><?= $p['kelas'] ?></td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 10px;">Jurusan</td>
-                            <?php
-                            if ($p['kelas'] = "X AKL" || $p['kelas'] = "XI AKL" || $p['kelas'] = "XII AKL") { ?>
-                                <td style="padding-left: 10px;">Akuntansi Keuangan Lembaga</td>
-                            <?php } else if ($p['kelas'] = "X MP" || $p['kelas'] = "XI MP" || $p['kelas'] = "XII MP") { ?>
-                                <td style="padding-left: 10px;">Manajemen Perkantoran</td>
-                            <?php } else if ($p['kelas'] = "X AN" || $p['kelas'] = "XI AN" || $p['kelas'] = "XII AN") { ?>
-                                <td style="padding-left: 10px;">Animasi</td>
-                            <?php } else if ($p['kelas'] = "X TJKT" || $p['kelas'] = "XI TJKT" || $p['kelas'] = "XII TJKT") { ?>
-                                <td style="padding-left: 10px;">Teknik Jaringan Komputer dan Telekomunikasi</td>
-                            <?php } else if ($p['kelas'] = "X DKV" || $p['kelas'] = "XI DKV" || $p['kelas'] = "XII DKV") { ?>
-                                <td style="padding-left: 10px;">Desain Komunikasi Visual</td>
-                            <?php } else if ($p['kelas'] = "X BP" || $p['kelas'] = "XI BP" || $p['kelas'] = "XII BP") { ?>
-                                <td style="padding-left: 10px;">Broadcasting dan Perfilman</td>
-                            <?php } else if ($p['kelas'] = "X PPLG" || $p['kelas'] = "XI PPLG" || $p['kelas'] = "XII PPLG") { ?>
-                                <td style="padding-left: 10px;">Pengembangan Perangkat Lunak dan GIM</td>
-                            <?php } ?>
+                <tbody>
+                    <tr>
+                        <td rowspan="5" style="width: 100px;">
+                            <img
+                                src="<?= $user ?>"
+                                style="margin-top: 20px; margin-left: 10px; margin-right: 10px"
+                                alt=""
+                                width="100"
+                                height="100" />
+                        </td>
+                        <td style="padding-left: 10px;">Nama</td>
+                        <td style="padding-left: 10px;"><?= $nama ?></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 10px;">Kelas</td>
+                        <td style="padding-left: 10px;"><?= $kelas ?></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 10px;">Jurusan</td>
+                        <?php
+                        if ($kelas == "X AK" | $kelas == "XI AKL" | $kelas == "XII AKL") { ?>
+                            <td style="padding-left: 10px;">Akuntansi Keuangan Lembaga</td>
+                        <?php } else if ($kelas == "X MP" || $kelas == "XI MP" || $kelas == "XII MP") { ?>
+                            <td style="padding-left: 10px;">Manajemen Perkantoran</td>
+                        <?php } else if ($kelas == "X AN" || $kelas == "XI AN" || $kelas == "XII AN") { ?>
+                            <td style="padding-left: 10px;">Animasi</td>
+                        <?php } else if ($kelas == "X TJKT" || $kelas == "XI TKJ" || $kelas == "XII TKJ") { ?>
+                            <td style="padding-left: 10px;">Teknik Jaringan Komputer dan Telekomunikasi</td>
+                        <?php } else if ($kelas == "X DKV" || $kelas == "XI DKV" || $kelas == "XII DKV") { ?>
+                            <td style="padding-left: 10px;">Desain Komunikasi Visual</td>
+                        <?php } else if ($kelas == "X BP" || $kelas == "XI PSPT" || $kelas == "XII PSPT") { ?>
+                            <td style="padding-left: 10px;">Broadcasting dan Perfilman</td>
+                        <?php } else if ($kelas == "X PPLG" || $kelas == "XI RPL" || $kelas == "XII RPL") { ?>
+                            <td style="padding-left: 10px;">Pengembangan Perangkat Lunak dan GIM</td>
+                        <?php } ?>
 
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 10px;">NIS</td>
-                            <td style="padding-left: 10px;"><?= $p['nis'] ?></td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 10px;">Nomor Peserta</td>
-                            <td style="padding-left: 10px;"><?= $p['id_peserta'] ?></td>
-                        </tr>
-                        <tr style="line-height: 30px;">
-                            <td style="padding-left: 10px; vertical-align: middle;">Mata Pelajaran</td>
-                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Teori Normatif dan adaptif</td>
-                        </tr>
-                        <tr style="line-height: 30px;">
-                            <td style="padding-left: 10px; vertical-align: middle;">Tanggal</td>
-                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">11 - 12 Desember 2024</td>
-                        </tr>
-                        <tr style="line-height: 30px;">
-                            <td style="padding-left: 10px; vertical-align: middle;">Waktu</td>
-                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">07:30 - 12:30 WIB</td>
-                        </tr>
-                        <tr style="line-height: 30px;">
-                            <td style="padding-left: 10px; vertical-align: middle;">Ruang Ujian</td>
-                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2"><?= $p['ruangan'] ?></td>
-                        </tr>
-                    <?php }
-                    ?>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 10px;">NIS</td>
+                        <td style="padding-left: 10px;"><?= $nis ?></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 10px;">Nomor Peserta</td>
+                        <td style="padding-left: 10px;"><?= $id_peserta ?></td>
+                    </tr>
+                    <tr style="line-height: 30px;">
+                        <td style="padding-left: 10px; vertical-align: middle;">Mata Pelajaran</td>
+                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Projek Produktif</td>
+                    </tr>
+                    <tr style="line-height: 30px;">
+                        <td style="padding-left: 10px; vertical-align: middle;">Tanggal</td>
+                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">5 - 6 Desember 2024</td>
+                    </tr>
+                    <tr style="line-height: 30px;">
+                        <td style="padding-left: 10px; vertical-align: middle;">Waktu</td>
+                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">07:30 - 14:00 WIB</td>
+                    </tr>
+                </tbody>
                 </tbody>
             </table>
             <table
@@ -190,9 +184,9 @@
                 style="border-collapse: collapse; width: 100%; margin-bottom: 1rem; color: #212529; background-color: transparent;">
                 <tbody>
                     <tr>
-                        <td style="padding-left: 10px;">
+                        <td style="vertical-align: middle; padding-left: 10px;">
                             <p>Kepala Sekolah</p>
-                            <img style="margin-left: 50px;" src="<?= $ttd ?>" alt="" width="40">
+                            <img src="<?= $barcode_validasi ?>" alt="" width="100">
                             <p>Sugiharti Soumifitri, M.Pd</p>
                         </td>
                     </tr>

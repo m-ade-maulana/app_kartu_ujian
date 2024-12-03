@@ -22,7 +22,7 @@ class Peserta extends BaseController
         $data['legitimasi_teori'] = session()->get('legitimasi_teori');
 
         return view('peserta/kartu_peserta', $data);
-        // var_dump($data);
+        var_dump($data);
     }
 
     public function cetak_kartu_legitimasi_projek()

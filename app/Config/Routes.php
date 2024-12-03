@@ -66,8 +66,8 @@ $routes->get('/admin/pengawas/delete/(:any)', 'Admin::delete_pengawas/$1');
 // Peserta
 $routes->get('/peserta/cek-kartu', 'Peserta::index');
 $routes->add('/peserta/kartu-peserta', 'Peserta::kartu_peserta');
-$routes->add('/peserta/kartu-peserta/legitimmasi-projek', 'Peserta::cetak_kartu_legitimasi_projek');
-$routes->add('/peserta/kartu-peserta/legitimmasi-teori', 'Peserta::cetak_kartu_legitimasi_teori');
+$routes->add('/peserta/kartu-peserta/legitimasi-projek', 'Peserta::cetak_kartu_legitimasi_projek');
+$routes->add('/peserta/kartu-peserta/legitimasi-teori', 'Peserta::cetak_kartu_legitimasi_teori');
 
 /*
  * --------------------------------------------------------------------
