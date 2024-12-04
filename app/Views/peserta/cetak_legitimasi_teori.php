@@ -25,7 +25,6 @@
                 id="data-diri"
                 class="table table-bordered" style="border-collapse: collapse; width: 100%; margin-bottom: 1rem; color: #212529; background-color: transparent; " border="1">
                 <tbody>
-                <tbody>
                     <tr>
                         <td rowspan="5" style="width: 100px;">
                             <img
@@ -82,7 +81,10 @@
                         <td style="padding-left: 10px; vertical-align: middle;">Waktu</td>
                         <td style="padding-left: 10px; vertical-align: middle;" colspan="2">07:30 - 14:00 WIB</td>
                     </tr>
-                </tbody>
+                    <tr style="line-height: 30px;">
+                        <td style="padding-left: 10px; vertical-align: middle;">Ruangan</td>
+                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2"><?= $ruangan ?></td>
+                    </tr>
                 </tbody>
             </table>
             <table
