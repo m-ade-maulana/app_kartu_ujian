@@ -71,7 +71,7 @@
                     </tr>
                     <tr style="line-height: 30px;">
                         <td style="padding-left: 10px; vertical-align: middle;">Mata Pelajaran</td>
-                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Projek Produktif</td>
+                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Normatif dan adaptif</td>
                     </tr>
                     <tr style="line-height: 30px;">
                         <td style="padding-left: 10px; vertical-align: middle;">Tanggal</td>
@@ -102,11 +102,11 @@
                         <td colspan="5" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
                     </tr>
                     <tr style="text-align: center;">
-                        <td style="vertical-align: middle; padding-left: 10px;">Bahasa Indonesia</td>
-                        <td style="vertical-align: middle; padding-left: 10px;">Matematika</td>
-                        <td style="vertical-align: middle; padding-left: 10px;">Bahasa Inggris</td>
-                        <td style="vertical-align: middle; padding-left: 10px;">PAI</td>
-                        <td style="vertical-align: middle; padding-left: 10px;">Seni Budaya</td>
+                        <td style="vertical-align: middle; padding-left: 10px;">Pend. Agama dan Budi Pekerti(X dan XI)</td>
+                        <td style="vertical-align: middle; padding-left: 10px;">Pend. Pancasila dan Kewarganegaraan (X dan XI)</td>
+                        <td style="vertical-align: middle; padding-left: 10px;">Seni Budaya (X)</td>
+                        <td style="vertical-align: middle; padding-left: 10px;">Bahasa Indonesia (X dan XI)</td>
+                        <td style="vertical-align: middle; padding-left: 10px;">Sejarah Indonesia (X dan XI)</td>
                     </tr>
                     <tr>
                         <td

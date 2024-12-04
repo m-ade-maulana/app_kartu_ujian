@@ -437,8 +437,8 @@
                                     <label for="legitimasiProjek" class="col-form-label">Legitimasi Projek</label>
                                     <select name="legitimasi_projek" id="legitimasiProjek" class="form-control">
                                         <option value="">Pilih Status</option>
-                                        <option value="yes">Yes</option>
-                                        <option value="no">No</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-md btn-block mt-2">Submit</button>
