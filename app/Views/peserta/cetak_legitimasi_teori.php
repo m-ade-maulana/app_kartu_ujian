@@ -75,7 +75,7 @@
                     </tr>
                     <tr style="line-height: 30px;">
                         <td style="padding-left: 10px; vertical-align: middle;">Tanggal</td>
-                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">5 - 6 Desember 2024</td>
+                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">11 - 12 Desember 2024</td>
                     </tr>
                     <tr style="line-height: 30px;">
                         <td style="padding-left: 10px; vertical-align: middle;">Waktu</td>
