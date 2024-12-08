@@ -14,4 +14,13 @@ class JadwalModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
+
+    public function getByData($data, $where)
+    {
+        return $this->db->table('data_mapel_ujian')
+            ->select("*")
+            ->where([$data => $where])
+            ->get()
+            ->getResultArray();
+    }
 }

@@ -75,7 +75,15 @@
                     </tr>
                     <tr style="line-height: 30px;">
                         <td style="padding-left: 10px; vertical-align: middle;">Tanggal</td>
-                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">11 - 12 Desember 2024</td>
+                        <td style="padding-left: 10px; vertical-align: middle;" colspan="2">
+                            <?php
+                            if ($kelas == "XII AKL" || $kelas == "XII MP" || $kelas == "XII AN" || $kelas == "XII TKJ" || $kelas == "XII DKV" || $kelas == "XII PPLG" || $kelas == "XII PSPT") {
+                                echo "14 Desember 2024";
+                            } else {
+                                echo "11 - 12 Desember 2024";
+                            }
+                            ?>
+                        </td>
                     </tr>
                     <tr style="line-height: 30px;">
                         <td style="padding-left: 10px; vertical-align: middle;">Waktu</td>
@@ -101,6 +109,7 @@
                         </td>
                         <td colspan="5" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
                     </tr>
+
                     <tr style="text-align: center;">
                         <td style="vertical-align: middle; padding-left: 10px;">Pend. Agama dan Budi Pekerti(X dan XI)</td>
                         <td style="vertical-align: middle; padding-left: 10px;">Pend. Pancasila dan Kewarganegaraan (X dan XI)</td>

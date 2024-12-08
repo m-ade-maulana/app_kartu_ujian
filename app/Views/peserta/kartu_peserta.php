@@ -50,6 +50,9 @@
                                 <div class="col-sm-4"><span>Ruangan</span></div>
                                 <div class="col-sm-8"><span>: <?= $ruangan ?></span></div>
                             </div>
+
+
+
                             <div class="d-grid gap-2 mt-2">
                                 <?php
                                 if ($legitimasi_projek == "Yes" && $legitimasi_teori == "Yes") { ?>
@@ -64,7 +67,58 @@
                                 <?php }
                                 ?>
                             </div>
+
                         </div>
+
+                    </div>
+
+                    <div class="mt-3">
+                        <h3>Jadwal Ujian</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Mata Pelajaran</th>
+                                    <th>Waktu</th>
+                                    <th>Tanggal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if ($kelas == "X AK" || $kelas == "X MP" || $kelas == "X TJKT" || $kelas == "X DKV" || $kelas == "X AN" || $kelas == "BP" || $kelas == "X PPLG") {
+                                    $no = 1;
+                                    foreach ($jadwal_ujian_kelas_x as $jpx) { ?>
+                                        <tr>
+                                            <td><?= $no++ ?></td>
+                                            <td><?= $jpx['nama_mapel'] ?></td>
+                                            <td><?= $jpx['jam_mulai'] . " - " . $jpx['jam_selesai'] ?></td>
+                                            <td><?= $jpx['tanggal'] ?></td>
+                                        </tr>
+                                    <?php }
+                                } else if ($kelas == "XI AKL" || $kelas == "XI MPLB" || $kelas == "XI TKJ" || $kelas == "XI DKV" || $kelas == "XI AN" || $kelas == "PSPT" || $kelas == "XI RPL") {
+                                    foreach ($jadwal_ujian_kelas_xi as $jpxi) { ?>
+                                        <tr>
+                                            <td><?= $no++ ?></td>
+                                            <td><?= $jpxi['nama_mapel'] ?></td>
+                                            <td><?= $jpxi['jam_mulai'] . " - " . $jpxi['jam_selesai'] ?></td>
+                                            <td><?= $jpxi['tanggal'] ?></td>
+                                        </tr>
+                                    <?php }
+                                } else if ($kelas == "XII AKL" || $kelas == "XII MPLB" || $kelas == "XII TKJ" || $kelas == "XII DKV" || $kelas == "XII AN" || $kelas == "PSPT" || $kelas == "XII RPL") {
+                                    $no = 1;
+                                    foreach ($jadwal_ujian_kelas_xii as $jpxii) { ?>
+                                        <tr>
+                                            <td><?= $no++ ?></td>
+                                            <td><?= $jpxii['nama_mapel'] ?></td>
+                                            <td><?= $jpxii['jam_mulai'] . " - " . $jpxii['jam_selesai'] ?></td>
+                                            <td><?= $jpxii['tanggal'] ?></td>
+                                        </tr>
+                                <?php }
+                                }
+                                ?>
+                            </tbody>
+
+                        </table>
                     </div>
                 </div>
             </div>
