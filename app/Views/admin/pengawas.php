@@ -62,7 +62,6 @@
                                     <td><?= $dp['tanggal_mengawas'] ?></td>
                                     <td>Ruangan <?= $dp['ruangan_pertama'] . " & " . $dp['ruangan_kedua'] ?></td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-info"><i class="fas fa-eye"></i></a>
                                         <a href="/admin/pengawas/delete/<?= $dp['id'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                     </td>
                                 </tr>
