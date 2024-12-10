@@ -52,7 +52,6 @@
                         </thead>
                         <tbody>
                             <?php
-
                             $no = 1;
                             foreach ($data_pengawas as $dp) { ?>
                                 <tr>
@@ -66,7 +65,6 @@
                                     </td>
                                 </tr>
                             <?php }
-
                             ?>
                         </tbody>
                     </table>
