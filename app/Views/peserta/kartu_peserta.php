@@ -97,6 +97,7 @@
                                         </tr>
                                     <?php }
                                 } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") {
+                                    $no = 1;
                                     foreach ($jadwal_ujian_kelas_xi as $jpxi) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
