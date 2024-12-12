@@ -25,9 +25,9 @@ class Peserta extends BaseController
         $data['jadwal_ujian_kelas_xi'] = $this->jadwal_model->getByData('kelas', 'XI');
         $data['jadwal_ujian_kelas_xii'] = $this->jadwal_model->getByData('kelas', 'XII');
 
-        // return view('peserta/kartu_peserta', $data);
+        return view('peserta/kartu_peserta', $data);
 
-        var_dump($data);
+        // var_dump($data);
     }
 
     public function cetak_kartu_legitimasi_projek()

@@ -84,6 +84,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <?php
                                 if ($kelas === "X AK" || $kelas === "X MP" || $kelas === "X TJKT" || $kelas === "X DKV" || $kelas === "X AN" || $kelas === "BP" || $kelas === "X PPLG") {
                                     $no = 1;
