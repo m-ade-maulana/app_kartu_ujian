@@ -376,6 +376,10 @@ class Admin extends BaseController
 
         $data['style'] = file_get_contents(ROOTPATH . '/public/assets/css/adminlte.css');
 
+        $data['jadwal_ujian_kelas_x'] = $this->jadwal_model->getByData('kelas', 'X');
+        $data['jadwal_ujian_kelas_xi'] = $this->jadwal_model->getByData('kelas', 'XI');
+        $data['jadwal_ujian_kelas_xii'] = $this->jadwal_model->getByData('kelas', 'XII');
+
         $file_pdf = "kartu_peserta_SMK Nusantara_1_Kota_Tangerang";
         $paper = "A4";
         $orientation = "portrait";

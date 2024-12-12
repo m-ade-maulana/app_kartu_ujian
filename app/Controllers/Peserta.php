@@ -77,6 +77,10 @@ class Peserta extends BaseController
         $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
         $data['barcode_validasi'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode-validasi.png');
 
+        $data['jadwal_ujian_kelas_x'] = $this->jadwal_model->getByData('kelas', 'X');
+        $data['jadwal_ujian_kelas_xi'] = $this->jadwal_model->getByData('kelas', 'XI');
+        $data['jadwal_ujian_kelas_xii'] = $this->jadwal_model->getByData('kelas', 'XII');
+
         $nama = session()->get('nama');
         $nis = session()->get('nis');
 
