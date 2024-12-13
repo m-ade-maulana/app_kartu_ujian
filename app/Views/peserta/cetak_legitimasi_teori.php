@@ -117,7 +117,7 @@
                     </tr>
 
                     <?php
-                    if ($kelas === "XII AKL" || $kelas === "XII MPLB" || $kelas === "XII TKJ" || $kelas === "XII DKV" || $kelas === "XII AN" || $kelas === "PSPT" || $kelas === "XII RPL") { ?>
+                    if ($kelas === "XII AKL" || $kelas === "XII MPLB" || $kelas === "XII TKJ" || $kelas === "XII DKV" || $kelas === "XII AN" || $kelas === "PSPT" || $kelas === "XII RPL" || $kelas === "XII AK" || $kelas === "XII MP" || $kelas === "XII TJKT" || $kelas === "BP" || $kelas === "XII PPLG") { ?>
                         <tr style="text-align: center;">
                             <?php foreach ($jadwal_ujian_kelas_xii as $jpxii) { ?>
                                 <td><?= $jpxii['nama_mapel'] ?></td>
@@ -125,13 +125,13 @@
                         </tr>
                     <?php } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") { ?>
                         <tr style="text-align: center;">
-                            <?php foreach ($jadwal_ujian_kelas_xii as $jpxii) { ?>
+                            <?php foreach ($jadwal_ujian_kelas_xi as $jpxi) { ?>
                                 <td><?= $jpxii['nama_mapel'] ?></td>
                             <?php } ?>
                         </tr>
                     <?php } else if ($kelas === "X AK" || $kelas === "X MP" || $kelas === "X TJKT" || $kelas === "X DKV" || $kelas === "X AN" || $kelas === "BP" || $kelas === "X PPLG") { ?>
                         <tr style="text-align: center;">
-                            <?php foreach ($jadwal_ujian_kelas_xii as $jpxii) { ?>
+                            <?php foreach ($jadwal_ujian_kelas_x as $jpx) { ?>
                                 <td><?= $jpxii['nama_mapel'] ?></td>
                             <?php } ?>
                         </tr>
