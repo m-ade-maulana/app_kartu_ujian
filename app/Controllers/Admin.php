@@ -55,7 +55,7 @@ class Admin extends BaseController
         $data['link'] = $this->link_model->getAllLink();
         // KELAS XII
         $data['peserta_xii'] = $this->peserta_model->findAll();
-        $data['peserta_xii_mp'] = $this->peserta_model->getByData('kelas', 'XII MP');
+        $data['peserta_xii_mp'] = $this->peserta_model->getByData('kelas', 'XII MPLB');
         $data['peserta_xii_ak'] = $this->peserta_model->getByData('kelas', 'XII AKL');
         $data['peserta_xii_an'] = $this->peserta_model->getByData('kelas', 'XII AN');
         $data['peserta_xii_tjkt'] = $this->peserta_model->getByData('kelas', 'XII TKJ');
