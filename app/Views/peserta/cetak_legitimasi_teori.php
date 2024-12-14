@@ -110,6 +110,8 @@
                         <?php
                         if ($kelas === "XII AKL" || $kelas === "XII MPLB" || $kelas === "XII TKJ" || $kelas === "XII DKV" || $kelas === "XII AN" || $kelas === "PSPT" || $kelas === "XII RPL") { ?>
                             <td colspan="3" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
+                        <?php } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") { ?>
+                            <td colspan="4" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
                         <?php } else { ?>
                             <td colspan="5" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
                         <?php }
