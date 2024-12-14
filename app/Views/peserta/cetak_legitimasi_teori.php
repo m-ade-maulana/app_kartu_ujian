@@ -126,13 +126,13 @@
                     <?php } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") { ?>
                         <tr style="text-align: center;">
                             <?php foreach ($jadwal_ujian_kelas_xi as $jpxi) { ?>
-                                <td><?= $jpxii['nama_mapel'] ?></td>
+                                <td><?= $jpxi['nama_mapel'] ?></td>
                             <?php } ?>
                         </tr>
                     <?php } else if ($kelas === "X AK" || $kelas === "X MP" || $kelas === "X TJKT" || $kelas === "X DKV" || $kelas === "X AN" || $kelas === "BP" || $kelas === "X PPLG") { ?>
                         <tr style="text-align: center;">
                             <?php foreach ($jadwal_ujian_kelas_x as $jpx) { ?>
-                                <td><?= $jpxii['nama_mapel'] ?></td>
+                                <td><?= $jpx['nama_mapel'] ?></td>
                             <?php } ?>
                         </tr>
                     <?php }
