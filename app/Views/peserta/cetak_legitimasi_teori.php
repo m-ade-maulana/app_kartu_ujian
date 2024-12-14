@@ -112,7 +112,7 @@
                             <td colspan="3" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
                         <?php } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") { ?>
                             <td colspan="4" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
-                        <?php } else { ?>
+                        <?php } else if ($kelas === "X AK" || $kelas === "X MP" || $kelas === "X TJKT" || $kelas === "X DKV" || $kelas === "X AN" || $kelas === "X BP" || $kelas === "X PPLG") { ?>
                             <td colspan="5" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
                         <?php }
                         ?>
@@ -170,7 +170,46 @@
                 ">
                                 3.
                             </td>
-                        <?php } else { ?>
+                        <?php } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") { ?>
+                        <tr>
+                            <td
+                                style="
+                  overflow: auto;
+                  height: 50px;
+                  vertical-align: middle;
+                  width: 15%;
+                ">
+                                1.
+                            </td>
+                            <td
+                                style="
+                  overflow: auto;
+                  height: 50px;
+                  vertical-align: middle;
+                  width: 15%;
+                ">
+                                2.
+                            </td>
+                            <td
+                                style="
+                  overflow: auto;
+                  height: 50px;
+                  vertical-align: middle;
+                  width: 15%;
+                ">
+                                3.
+                            </td>
+                            <td
+                                style="
+                  overflow: auto;
+                  height: 50px;
+                  vertical-align: middle;
+                  width: 15%;
+                ">
+                                4.
+                            </td>
+                        </tr>
+                    <?php } else { ?>
                         <tr>
                             <td
                                 style="
