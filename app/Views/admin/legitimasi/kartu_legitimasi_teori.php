@@ -132,6 +132,7 @@
                         <tr style="text-align: center;">
                             <?php foreach ($jadwal_ujian_kelas_xi as $jpxi) { ?>
                                 <td><?= $jpxi['nama_mapel'] ?></td>
+                                <td>...</td>
                             <?php } ?>
                         </tr>
                     <?php } else if ($p['kelas'] == "XII AK" || $p['kelas'] == "XII MP" || $p['kelas'] == "XII TJKT" || $p['kelas'] == "XII DKV" || $p['kelas'] == "XII AN" || $p['kelas'] == "BP" || $p['kelas'] == "XII PPLG") { ?>
