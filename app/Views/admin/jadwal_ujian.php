@@ -87,7 +87,11 @@
                                     <option value="Seni Budaya">Seni Budaya</option>
                                     <option value="Sejarah Indonesia">Sejarah Indonesia</option>
                                     <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
-                                    <option value="Pend. Pancasiladan Kewarganegaraan">Pend. Pancasila dan Kewarganegaraan</option>
+                                    <option value="Matematika">Matematika</option>
+                                    <option value="Bahasa Inggris">Bahasa Inggris</option>
+                                    <option value="Projek IPA">Projek IPA</option>
+                                    <option value="Projek Kreatif dan Kewirausahaan">Projek Kreatif dan Kewirausahaan</option>
+                                    <option value="Informatika">Informatika</option>
                                 </select>
                             </div>
                             <div class="pb-2">

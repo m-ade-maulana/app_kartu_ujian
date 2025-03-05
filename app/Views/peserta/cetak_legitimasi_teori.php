@@ -15,7 +15,7 @@
             </div>
             <div style="text-align: center; margin-top:10px; margin-bottom: 10px; font-weight: bold;">
                 <span>SMK Nusantara 1 Kota Tangerang</span><br>
-                <span>Legitimasi Sumatif Akhir Semester</span><br>
+                <span>Legitimasi Sumatif Tengah Semester Genap</span><br>
                 <span>Tahun Ajaran 2024/2025</span>
             </div>
         </div>
@@ -80,7 +80,7 @@
                             if ($kelas == "XII AKL" || $kelas == "XII MP" || $kelas == "XII AN" || $kelas == "XII TKJ" || $kelas == "XII DKV" || $kelas == "XII PPLG" || $kelas == "XII PSPT") {
                                 echo "14 Desember 2024";
                             } else {
-                                echo "11 - 12 Desember 2024";
+                                echo "12 - 13 Februari 2025";
                             }
                             ?>
                         </td>
@@ -139,129 +139,80 @@
                         </tr>
                     <?php }
                     ?>
-
-                    <?php
-                    if ($kelas === "XII AKL" || $kelas === "XII MPLB" || $kelas === "XII TKJ" || $kelas === "XII DKV" || $kelas === "XII AN" || $kelas === "PSPT" || $kelas === "XII RPL") { ?>
-                        <tr>
-                            <td
-                                style="
+                    <tr>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                1.
-                            </td>
-                            <td
-                                style="
+                            1.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                2.
-                            </td>
-                            <td
-                                style="
+                            2.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                3.
-                            </td>
-                        <?php } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") { ?>
-                        <tr>
-                            <td
-                                style="
+                            3.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                1.
-                            </td>
-                            <td
-                                style="
+                            4.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                2.
-                            </td>
-                            <td
-                                style="
+                            5.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                3.
-                            </td>
-                            <td
-                                style="
+                            6.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                4.
-                            </td>
-                        </tr>
-                    <?php } else { ?>
-                        <tr>
-                            <td
-                                style="
+                            7.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
                   height: 50px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                1.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                2.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                3.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                4.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                5.
-                            </td>
-                        </tr>
-                    <?php }
-                    ?>
-
-
-
+                            8.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <table

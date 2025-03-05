@@ -15,7 +15,7 @@
             </div>
             <div style="text-align: center; margin-top:10px; margin-bottom: 10px; font-weight: bold;">
                 <span>SMK Nusantara 1 Kota Tangerang</span><br>
-                <span>Legitimasi Sumatif Akhir Semester</span><br>
+                <span>Legitimasi Sumatif Tengah Semester Genap</span><br>
                 <span>Tahun Ajaran 2024/2025</span>
             </div>
         </div>
@@ -73,11 +73,20 @@
                         </tr>
                         <tr style="line-height: 30px;">
                             <td style="padding-left: 10px; vertical-align: middle;">Mata Pelajaran</td>
-                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Projek Produkti</td>
+                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Projek Produktif</td>
                         </tr>
                         <tr style="line-height: 30px;">
                             <td style="padding-left: 10px; vertical-align: middle;">Tanggal</td>
-                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">11 - 12 Desember 2024</td>
+                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">
+                                <?php
+                                if ($p['kelas'] === "XII AKL" || $p['kelas'] === "XII MP" || $p['kelas'] === "XII AN" || $p['kelas'] === "XII TKJ" || $p['kelas'] === "XII DKV" || $p['kelas'] === "XII PPLG" || $p['kelas'] === "XII PSPT") {
+                                    // echo "14 Desember 2024";
+                                    echo "Tidak Ujian";
+                                } else {
+                                    echo "10 - 11 Maret 2025";
+                                }
+                                ?>
+                            </td>
                         </tr>
                         <tr style="line-height: 30px;">
                             <td style="padding-left: 10px; vertical-align: middle;">Waktu</td>

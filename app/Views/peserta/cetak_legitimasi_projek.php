@@ -15,7 +15,7 @@
             </div>
             <div style="text-align: center; margin-top:10px; margin-bottom: 10px; font-weight: bold;">
                 <span>SMK Nusantara 1 Kota Tangerang</span><br>
-                <span>Legitimasi Sumatif Akhir Semester</span><br>
+                <span>Legitimasi Sumatif Tengah Semester Genap</span><br>
                 <span>Tahun Ajaran 2024/2025</span>
             </div>
         </div>
@@ -78,9 +78,10 @@
                         <td style="padding-left: 10px; vertical-align: middle;" colspan="2">
                             <?php
                             if ($kelas == "XII AKL" || $kelas == "XII MP" || $kelas == "XII AN" || $kelas == "XII TKJ" || $kelas == "XII DKV" || $kelas == "XII PPLG" || $kelas == "XII PSPT") {
-                                echo "14 Desember 2024";
+                                // echo "14 Desember 2024";
+                                echo "Tidak Ujian";
                             } else {
-                                echo "11 - 12 Desember 2024";
+                                echo "6 - 7 Februari 2025";
                             }
                             ?>
                         </td>
