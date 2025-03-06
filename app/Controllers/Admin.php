@@ -365,7 +365,7 @@ class Admin extends BaseController
         return $this->pdfgenerator->generate($html, $file_pdf, $paper);
     }
 
-    public function cetak_kartu_legitimasi_teori($nis)
+    public function cetak_kartu_legitimasi_teori_x($nis)
     {
         $data['peserta'] = $this->peserta_model->where('nis', $nis)->findAll();
 
@@ -383,7 +383,30 @@ class Admin extends BaseController
         $file_pdf = "kartu_peserta_SMK Nusantara_1_Kota_Tangerang";
         $paper = "A4";
         $orientation = "portrait";
-        $html = view('admin/legitimasi/kartu_legitimasi_teori', $data);
+        $html = view('admin/legitimasi/x/kartu_legitimasi_teori', $data);
+
+        return $this->pdfgenerator->generate($html, $file_pdf, $paper);
+    }
+
+    public function cetak_kartu_legitimasi_teori_xi($nis)
+    {
+        $data['peserta'] = $this->peserta_model->where('nis', $nis)->findAll();
+
+        // $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
+        $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
+        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
+        $data['barcode_validasi'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode-validasi.png');
+
+        $data['style'] = file_get_contents(ROOTPATH . '/public/assets/css/adminlte.css');
+
+        $data['jadwal_ujian_kelas_x'] = $this->jadwal_model->getByData('kelas', 'X Semua Jurusan');
+        $data['jadwal_ujian_kelas_xi'] = $this->jadwal_model->getByData('kelas', 'XI Semua Jurusan');
+        $data['jadwal_ujian_kelas_xii'] = $this->jadwal_model->getByData('kelas', 'XII Semua Jurusan');
+
+        $file_pdf = "kartu_peserta_SMK Nusantara_1_Kota_Tangerang";
+        $paper = "A4";
+        $orientation = "portrait";
+        $html = view('admin/legitimasi/xi/kartu_legitimasi_teori', $data);
 
         return $this->pdfgenerator->generate($html, $file_pdf, $paper);
     }

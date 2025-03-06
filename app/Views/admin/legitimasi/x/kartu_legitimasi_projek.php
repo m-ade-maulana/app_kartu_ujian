@@ -73,16 +73,17 @@
                         </tr>
                         <tr style="line-height: 30px;">
                             <td style="padding-left: 10px; vertical-align: middle;">Mata Pelajaran</td>
-                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Teori Normatif dan adaptif</td>
+                            <td style="padding-left: 10px; vertical-align: middle;" colspan="2">Projek Produktif</td>
                         </tr>
                         <tr style="line-height: 30px;">
                             <td style="padding-left: 10px; vertical-align: middle;">Tanggal</td>
                             <td style="padding-left: 10px; vertical-align: middle;" colspan="2">
                                 <?php
                                 if ($p['kelas'] === "XII AKL" || $p['kelas'] === "XII MP" || $p['kelas'] === "XII AN" || $p['kelas'] === "XII TKJ" || $p['kelas'] === "XII DKV" || $p['kelas'] === "XII PPLG" || $p['kelas'] === "XII PSPT") {
-                                    echo "14 Desember 2024";
+                                    // echo "14 Desember 2024";
+                                    echo "Tidak Ujian";
                                 } else {
-                                    echo "12 - 13 Maret 2025";
+                                    echo "10 - 11 Maret 2025";
                                 }
                                 ?>
                             </td>
@@ -111,202 +112,32 @@
                             style="vertical-align: middle; width: 15%; padding-left: 10px;">
                             Tanda Tangan Pengawas
                         </td>
-                        <?php
-                        if ($p['kelas'] === "XII AKL" || $p['kelas'] === "XII MPLB" || $p['kelas'] === "XII TKJ" || $p['kelas'] === "XII DKV" || $p['kelas'] === "XII AN" || $p['kelas'] === "PSPT" || $p['kelas'] === "XII RPL") { ?>
-                            <td colspan="3" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
-                        <?php } else { ?>
-                            <td colspan="5" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
-                        <?php }
-                        ?>
+                        <td colspan="2" style="font-weight: bold; text-align: center;" class="text-center fw-bold">Paraf</td>
                     </tr>
-
-
-                    <?php
-                    if ($p['kelas'] === "X AK" || $p['kelas'] === "X MP" || $p['kelas'] === "X TJKT" || $p['kelas'] === "X DKV" || $p['kelas'] === "X AN" || $p['kelas'] === "BP" || $p['kelas'] === "X PPLG") { ?>
-                        <tr style="text-align: center;">
-                            <?php foreach ($jadwal_ujian_kelas_x as $jpx) { ?>
-                                <td><?= $jpx['nama_mapel'] ?></td>
-                            <?php } ?>
-                        </tr>
-                    <?php } else if ($p['kelas'] === "XI AK" || $p['kelas'] === "XI MP" || $p['kelas'] === "XI TJKT" || $p['kelas'] === "XI DKV" || $p['kelas'] === "XI AN" || $p['kelas'] === "BP" || $p['kelas'] === "XI PPLG") { ?>
-                        <tr style="text-align: center;">
-                            <?php foreach ($jadwal_ujian_kelas_xi as $jpxi) { ?>
-                                <td><?= $jpxi['nama_mapel'] ?></td>
-                                <td>...</td>
-                            <?php } ?>
-                        </tr>
-                    <?php } else if ($p['kelas'] == "XII AK" || $p['kelas'] == "XII MP" || $p['kelas'] == "XII TJKT" || $p['kelas'] == "XII DKV" || $p['kelas'] == "XII AN" || $p['kelas'] == "BP" || $p['kelas'] == "XII PPLG") { ?>
-                        <tr style="text-align: center;">
-                            <?php foreach ($jadwal_ujian_kelas_xii as $jpxii) { ?>
-                                <td><?= $jpxii['nama_mapel'] ?></td>
-                            <?php } ?>
-                        </tr>
-                    <?php } ?>
-                    <?php
-                    if ($p['kelas'] == "X AK" || $p['kelas'] == "X MP" || $p['kelas'] == "X TJKT" || $p['kelas'] == "X DKV" || $p['kelas'] == "X AN" || $p['kelas'] == "BP" || $p['kelas'] == "X PPLG") { ?>
-                        <tr>
-                            <td
-                                style="
+                    <tr style="text-align: center;">
+                        <td style="vertical-align: middle; padding-left: 10px;">Pelaksanaan Projek</td>
+                        <td style="vertical-align: middle; padding-left: 10px;">Sidang Projek</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="
                   overflow: auto;
-                  height: 50px;
+                  height: 100px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                1.
-                            </td>
-                            <td
-                                style="
+                            1.
+                        </td>
+                        <td
+                            style="
                   overflow: auto;
-                  height: 50px;
+                  height: 100px;
                   vertical-align: middle;
                   width: 15%;
                 ">
-                                2.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                3.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                4.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                5.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                6.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                7.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                8.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                9.
-                            </td>
-                        </tr>
-                    <?php } else if ($p['kelas'] == "XI AK" || $p['kelas'] == "XI MP" || $p['kelas'] == "XI TJKT" || $p['kelas'] == "XI DKV" || $p['kelas'] == "XI AN" || $p['kelas'] == "BP" || $p['kelas'] == "XI PPLG") { ?>
-                        <tr>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                1.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                2.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                3.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                4.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                5.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                6.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                7.
-                            </td>
-                            <td
-                                style="
-                  overflow: auto;
-                  height: 50px;
-                  vertical-align: middle;
-                  width: 15%;
-                ">
-                                8.
-                            </td>
-                        </tr>
-                    <?php }
-
-                    ?>
-
-
+                            2.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <table
@@ -330,7 +161,6 @@
                 </tbody>
             </table>
         </div>
-
         <div id="footer" style="display: flex; justify-content: space-between">
             <table
                 id="validasi"

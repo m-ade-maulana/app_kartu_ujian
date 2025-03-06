@@ -61,7 +61,7 @@ class Peserta extends BaseController
         // return view('cetak_legitimasi_projek', $data);
     }
 
-    public function cetak_kartu_legitimasi_teori()
+    public function cetak_kartu_legitimasi_teori_x()
     {
         $data['id_peserta'] = session()->get('id_peserta');
         $data['nama'] = session()->get('nama');
@@ -87,7 +87,38 @@ class Peserta extends BaseController
         $file_pdf = "Kartu_Peserta_" . $nama . $nis;
         $paper = "A4";
         $orientation = "Portrait";
-        $html = view('peserta/cetak_legitimasi_teori', $data);
+        $html = view('peserta/legitimasi/x/kartu_legitimasi_teori', $data);
+
+        return $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+    }
+
+    public function cetak_kartu_legitimasi_teori_xi()
+    {
+        $data['id_peserta'] = session()->get('id_peserta');
+        $data['nama'] = session()->get('nama');
+        $data['nis'] = session()->get('nis');
+        $data['kelas'] = session()->get('kelas');
+        $data['ruangan'] = session()->get('ruangan');
+        $data['foto'] = session()->get('foto');
+        $data['legitimasi_projek'] = session()->get('legitimasi_projek');
+        $data['legitimasi_teori'] = session()->get('legitimasi_teori');
+
+        // $data['ttd'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/ttd.png');
+        $data['logo'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/logo-smk.png');
+        $data['user'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/user.png');
+        $data['barcode_validasi'] = $this->imageToBase64(ROOTPATH . '/public/assets/img/barcode-validasi.png');
+
+        $data['jadwal_ujian_kelas_x'] = $this->jadwal_model->getByData('kelas', 'X');
+        $data['jadwal_ujian_kelas_xi'] = $this->jadwal_model->getByData('kelas', 'XI');
+        $data['jadwal_ujian_kelas_xii'] = $this->jadwal_model->getByData('kelas', 'XII');
+
+        $nama = session()->get('nama');
+        $nis = session()->get('nis');
+
+        $file_pdf = "Kartu_Peserta_" . $nama . $nis;
+        $paper = "A4";
+        $orientation = "Portrait";
+        $html = view('peserta/legitimasi/xi/kartu_legitimasi_teori', $data);
 
         return $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
     }

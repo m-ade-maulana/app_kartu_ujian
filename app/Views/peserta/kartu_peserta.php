@@ -55,16 +55,30 @@
 
                             <div class="d-grid gap-2 mt-2">
                                 <?php
-                                if ($legitimasi_projek == "Yes" && $legitimasi_teori == "Yes") { ?>
-                                    <a href="<?= site_url('/peserta/kartu-peserta/legitimasi-projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
-                                    <a href="<?= site_url('/peserta/kartu-peserta/legitimasi-teori') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu Legitimasi Teori</a>
-                                <?php } else if ($legitimasi_projek == "Yes" && $legitimasi_teori == "No") { ?>
-                                    <a href="<?= site_url('/peserta/kartu-peserta/legitimasi-projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
-                                    <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu Legitimasi Teori</a>
-                                <?php } else if ($legitimasi_projek == "No" && $legitimasi_teori == "No") { ?>
-                                    <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu legitimasi Projek</a>
-                                    <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu Legitimasi Teori</a>
+                                if ($kelas == 'X AK' || $kelas == 'X MP' || $kelas == 'X AN' || $kelas == 'X TJKT' || $kelas == 'X DKV' || $kelas == 'X BP' || $kelas == 'X PPLG') {
+                                    if ($legitimasi_projek == "Yes" && $legitimasi_teori == "Yes") { ?>
+                                        <a href="<?= site_url('/peserta/kartu-peserta/legitimasi-projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
+                                        <a href="<?= site_url('/peserta/kartu-peserta_x/legitimasi-teori') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu Legitimasi Teori</a>
+                                    <?php } else if ($legitimasi_projek == "Yes" && $legitimasi_teori == "No") { ?>
+                                        <a href="<?= site_url('/peserta/kartu-peserta/legitimasi-projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
+                                        <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu Legitimasi Teori</a>
+                                    <?php } else if ($legitimasi_projek == "No" && $legitimasi_teori == "No") { ?>
+                                        <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu legitimasi Projek</a>
+                                        <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu Legitimasi Teori</a>
+                                    <?php }
+                                } else {
+                                    if ($legitimasi_projek == "Yes" && $legitimasi_teori == "Yes") { ?>
+                                        <a href="<?= site_url('/peserta/kartu-peserta/legitimasi-projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
+                                        <a href="<?= site_url('/peserta/kartu-peserta_xi/legitimasi-teori') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu Legitimasi Teori</a>
+                                    <?php } else if ($legitimasi_projek == "Yes" && $legitimasi_teori == "No") { ?>
+                                        <a href="<?= site_url('/peserta/kartu-peserta/legitimasi-projek') ?>" target="_blank" class="btn btn-primary fw-bold">Cetak Kartu legitimasi Projek</a>
+                                        <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu Legitimasi Teori</a>
+                                    <?php } else if ($legitimasi_projek == "No" && $legitimasi_teori == "No") { ?>
+                                        <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu legitimasi Projek</a>
+                                        <a href="#" target="_blank" class="btn btn-secondary fw-bold">Cetak Kartu Legitimasi Teori</a>
                                 <?php }
+                                }
+
                                 ?>
                             </div>
 

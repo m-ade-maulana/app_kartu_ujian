@@ -57,8 +57,13 @@
                                     </td>
                                     <td>
                                         <?php
-                                        if ($p['legitimasi_teori'] == 'Yes') { ?>
-                                            <a href="<?= site_url('admin/cetak-legitimasi-teori/' . $p['nis']) ?>" target="_blank" class="btn btn-sm btn-primary fw-bold">Unduh legitimasi Teori</a>
+                                        if ($p['legitimasi_teori'] == 'Yes') {
+                                            if ($p['kelas'] == 'X AK' || $p['kelas'] == 'X MP' || $p['kelas'] == 'X AN' || $p['kelas'] == 'X TJKT' || $p['kelas'] == 'X DKV' || $p['kelas'] == 'X BP' || $p['kelas'] == 'X PPLG') { ?>
+                                                <a href="<?= site_url('admin/cetak-legitimasi-teori_x/' . $p['nis']) ?>" target="_blank" class="btn btn-sm btn-primary fw-bold">Unduh legitimasi Teori</a>
+                                            <?php } else { ?>
+                                                <a href="<?= site_url('admin/cetak-legitimasi-teori_xi/' . $p['nis']) ?>" target="_blank" class="btn btn-sm btn-primary fw-bold">Unduh legitimasi Teori</a>
+                                            <?php }
+                                            ?>
                                         <?php } else if ($p['legitimasi_teori'] == 'No') { ?>
                                             <a href="#" class="btn btn-sm btn-secondary fw-bold" tabindex="-1">Unduh Legitimasi Teori</a>
                                         <?php }

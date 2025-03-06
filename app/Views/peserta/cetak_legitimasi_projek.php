@@ -81,7 +81,7 @@
                                 // echo "14 Desember 2024";
                                 echo "Tidak Ujian";
                             } else {
-                                echo "6 - 7 Februari 2025";
+                                echo "10 - 11 Maret 2025";
                             }
                             ?>
                         </td>

@@ -50,6 +50,8 @@ $routes->get('/admin/data-pengawas', 'Admin::pengawas');
 $routes->get('/admin/jadwal-ujian', 'Admin::jadwal_ujian');
 $routes->get('/admin/cetak-legitimasi-projek/(:any)', 'Admin::cetak_kartu_legitimasi_projek/$1');
 $routes->get('/admin/cetak-legitimasi-teori/(:any)', 'Admin::cetak_kartu_legitimasi_teori/$1');
+$routes->get('/admin/cetak-legitimasi-teori_x/(:any)', 'Admin::cetak_kartu_legitimasi_teori_x/$1');
+$routes->get('/admin/cetak-legitimasi-teori_xi/(:any)', 'Admin::cetak_kartu_legitimasi_teori_xi/$1');
 
 // Admin/Insert-Fitur
 $routes->post('/admin/jadwal-ujian/insert', 'Admin::insert_jadwal_ujian');
@@ -76,7 +78,8 @@ $routes->get('/admin/peserta/delete/(:any)', 'Admin::delete_peserta/$1');
 $routes->get('/peserta/cek-kartu', 'Peserta::index');
 $routes->add('/peserta/kartu-peserta', 'Peserta::kartu_peserta');
 $routes->add('/peserta/kartu-peserta/legitimasi-projek', 'Peserta::cetak_kartu_legitimasi_projek');
-$routes->add('/peserta/kartu-peserta/legitimasi-teori', 'Peserta::cetak_kartu_legitimasi_teori');
+$routes->add('/peserta/kartu-peserta_x/legitimasi-teori', 'Peserta::cetak_kartu_legitimasi_teori_x');
+$routes->add('/peserta/kartu-peserta_xi/legitimasi-teori', 'Peserta::cetak_kartu_legitimasi_teori_xi');
 
 /*
  * --------------------------------------------------------------------
