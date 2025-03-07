@@ -115,7 +115,6 @@
                         <td>Pendidikan Pancasila</td>
                         <td>Sejarah Indonesia</td>
                         <td>Bahasa Indonesia</td>
-                        <td>Seni Budaya</td>
                         <td>Matematika</td>
                         <td>Bahasa Inggris</td>
                         <td>Projek IPA</td>
@@ -128,7 +127,6 @@
                         <td style="overflow: auto; height: 50px; vertical-align: middle; width:15%;">5.</td>
                         <td style="overflow: auto; height: 50px; vertical-align: middle; width:15%;">6.</td>
                         <td style="overflow: auto; height: 50px; vertical-align: middle; width:15%;">7.</td>
-                        <td style="overflow: auto; height: 50px; vertical-align: middle; width:15%;">8.</td>
                     </tr>
                 </tbody>
             </table>

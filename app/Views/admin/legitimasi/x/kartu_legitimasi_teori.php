@@ -82,7 +82,7 @@
                                 if ($p['kelas'] === "XII AKL" || $p['kelas'] === "XII MP" || $p['kelas'] === "XII AN" || $p['kelas'] === "XII TKJ" || $p['kelas'] === "XII DKV" || $p['kelas'] === "XII PPLG" || $p['kelas'] === "XII PSPT") {
                                     echo "14 Desember 2024";
                                 } else {
-                                    echo "12 - 13 Maret 2025";
+                                    echo "12 - 14 Maret 2025";
                                 }
                                 ?>
                             </td>
