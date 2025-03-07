@@ -100,7 +100,7 @@
                             <tbody>
 
                                 <?php
-                                if ($kelas === "X AK" || $kelas === "X MP" || $kelas === "X TJKT" || $kelas === "X DKV" || $kelas === "X AN" || $kelas === "BP" || $kelas === "X PPLG") {
+                                if ($kelas == "X AK" || $kelas == "X MP" || $kelas == "X TJKT" || $kelas == "X DKV" || $kelas == "X AN" || $kelas == "BP" || $kelas == "X PPLG") {
                                     $no = 1;
                                     foreach ($jadwal_ujian_kelas_x as $jpx) { ?>
                                         <tr>
@@ -110,7 +110,7 @@
                                             <td><?= $jpx['tanggal'] ?></td>
                                         </tr>
                                     <?php }
-                                } else if ($kelas === "XI AKL" || $kelas === "XI MPLB" || $kelas === "XI TKJ" || $kelas === "XI DKV" || $kelas === "XI AN" || $kelas === "PSPT" || $kelas === "XI RPL") {
+                                } else if ($kelas == "XI AKL" || $kelas == "XI MPLB" || $kelas == "XI TKJ" || $kelas == "XI DKV" || $kelas == "XI AN" || $kelas == "PSPT" || $kelas == "XI RPL") {
                                     $no = 1;
                                     foreach ($jadwal_ujian_kelas_xi as $jpxi) { ?>
                                         <tr>
@@ -120,7 +120,7 @@
                                             <td><?= $jpxi['tanggal'] ?></td>
                                         </tr>
                                     <?php }
-                                } else if ($kelas === "XII AKL" || $kelas === "XII MPLB" || $kelas === "XII TKJ" || $kelas === "XII DKV" || $kelas === "XII AN" || $kelas === "PSPT" || $kelas === "XII RPL") {
+                                } else if ($kelas == "XII AKL" || $kelas == "XII MPLB" || $kelas == "XII TKJ" || $kelas == "XII DKV" || $kelas == "XII AN" || $kelas == "PSPT" || $kelas == "XII RPL") {
                                     $no = 1;
                                     foreach ($jadwal_ujian_kelas_xii as $jpxii) { ?>
                                         <tr>
@@ -130,6 +130,8 @@
                                             <td><?= $jpxii['tanggal'] ?></td>
                                         </tr>
                                 <?php }
+                                } else {
+                                    echo "Jadwal tidak ada";
                                 }
                                 ?>
                             </tbody>

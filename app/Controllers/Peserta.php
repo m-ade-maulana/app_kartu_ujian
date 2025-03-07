@@ -21,9 +21,9 @@ class Peserta extends BaseController
         $data['legitimasi_projek'] = session()->get('legitimasi_projek');
         $data['legitimasi_teori'] = session()->get('legitimasi_teori');
 
-        $data['jadwal_ujian_kelas_x'] = $this->jadwal_model->getByData('kelas', 'X');
-        $data['jadwal_ujian_kelas_xi'] = $this->jadwal_model->getByData('kelas', 'XI');
-        $data['jadwal_ujian_kelas_xii'] = $this->jadwal_model->getByData('kelas', 'XII');
+        $data['jadwal_ujian_kelas_x'] = $this->jadwal_model->getByData('kelas', 'X Semua Jurusan');
+        $data['jadwal_ujian_kelas_xi'] = $this->jadwal_model->getByData('kelas', 'XI Semua Jurusan');
+        $data['jadwal_ujian_kelas_xii'] = $this->jadwal_model->getByData('kelas', 'XII Semua Jurusan');
 
         return view('peserta/kartu_peserta', $data);
 
