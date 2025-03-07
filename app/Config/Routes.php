@@ -56,6 +56,9 @@ $routes->get('/admin/cetak-legitimasi-teori_xi/(:any)', 'Admin::cetak_kartu_legi
 // Admin/Insert-Fitur
 $routes->post('/admin/jadwal-ujian/insert', 'Admin::insert_jadwal_ujian');
 $routes->post('/admin/pengawas/insert', 'Admin::insert_pengawas');
+$routes->post('/admin/peserta_x/insert', 'Admin::insert_peserta_x');
+$routes->post('/admin/peserta_xi/insert', 'Admin::insert_peserta_xi');
+$routes->post('/admin/peserta_xii/insert', 'Admin::insert_peserta_xii');
 
 // Admin/Update-Fitur
 $routes->add('/admin/data-peserta/update/(:any)/ruang/kelas_x', 'Admin::update_ruang_kelas_x/$1');

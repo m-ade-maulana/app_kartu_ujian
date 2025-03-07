@@ -24,7 +24,14 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-            <h3>Data Kelas XII</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Data Kelas XII</h3>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <a href="#" data-toggle="modal" data-target="#tambahPeserta" class="float-sm-right btn btn-primary btn-sm">Tambah Peserta</a>
+                </div><!-- /.col -->
+            </div>
             <div class="card card-primary card-outline card-outline-tabs">
                 <div class="card-header p-0 border-bottom-0">
                     <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
@@ -353,6 +360,45 @@
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
+
+        <div class="modal fade" id="tambahPeserta" tabindex="-1" aria-labelledby="tambahPeserta" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMapel">Tambah Peserta</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="<?= site_url('admin/peserta_xii/insert') ?>" method="post">
+                            <div class="pb-2">
+                                <label for="Nis" class="col-form-label">Nis</label>
+                                <input type="text" id="Nis" class="form-control" name="nis">
+                            </div>
+                            <div class="pb-2">
+                                <label for="Nama" class="col-form-label">Nama</label>
+                                <input type="text" id="Nama" class="form-control" name="nama">
+                            </div>
+                            <div class="pb-2">
+                                <label for="Kelas" class="col-form-label">Kelas</label>
+                                <select name="kelas" id="Kelas" class="form-control">
+                                    <option value="X AKL">X AKL</option>
+                                    <option value="X MPLB">X MPLB</option>
+                                    <option value="X AN">X AN</option>
+                                    <option value="X TJKT">X TJKT</option>
+                                    <option value="X DKV">X DKV</option>
+                                    <option value="X BP">X BP</option>
+                                    <option value="X PPLG">X PPLG</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-md btn-block mt-2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <?php
         foreach ($peserta_xii as $px) { ?>
             <div class="modal fade" id="editRuanganKelasXII<?= $px['id_peserta'] ?>" tabindex="-1" aria-labelledby="editRuangan" aria-hidden="true">

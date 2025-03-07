@@ -342,6 +342,123 @@ class Admin extends BaseController
         // Kembalikan ke halaman pengawas
         return redirect()->to('/jadwal_ujian');
     }
+
+    public function insert_peserta_x()
+    {
+        $validation = \Config\Services::validation();
+        $this->validation->setRule('nis', 'Nis', 'required');
+        $this->validation->setRule('nama', 'Nama', 'required');
+        $this->validation->setRule('kelas', 'Kelas', 'required');
+
+        $dataValid = $this->validation->withRequest($this->request)->run();
+
+        if ($dataValid) {
+            if ($this->request->getMethod()) {
+                $data = [
+                    'nis' => $this->request->getPost('nis'),
+                    'nama' => $this->request->getPost('nama'),
+                    'kelas' => $this->request->getPost('kelas'),
+                    'foto' => 'avatar.jpg',
+                    'legitimasi_projek' => 'No',
+                    'legitimasi_teori' => 'No'
+                ];
+                // var_dump($data);
+                $insert = $this->peserta_model->insert($data);
+                if ($insert) {
+                    alert_swal('success', 'Suksess', 'Data peserta berhasil ditambahkan');
+                    return redirect()->to('/admin/data-peserta/kelas-x');
+                } else {
+                    alert_swal('error', 'Gagal', 'Data peserta tidak berhasil ditambahkan');
+                    return redirect()->to('/admin/data-peserta/kelas-x');
+                }
+            }
+        }
+
+        // Eror jika data tidak valid, menampilkan pesan error
+        alert_swal('error', 'Error', 'Ada kolom yang belum di isi, silahkan periksa kembali');
+
+
+        // Kembalikan ke halaman pengawas
+        return redirect()->to('/admin/data-peserta/kelas-x');
+    }
+
+    public function insert_peserta_xi()
+    {
+        $validation = \Config\Services::validation();
+        $this->validation->setRule('nis', 'Nis', 'required');
+        $this->validation->setRule('nama', 'Nama', 'required');
+        $this->validation->setRule('kelas', 'Kelas', 'required');
+
+        $dataValid = $this->validation->withRequest($this->request)->run();
+
+        if ($dataValid) {
+            if ($this->request->getMethod()) {
+                $data = [
+                    'nis' => $this->request->getPost('nis'),
+                    'nama' => $this->request->getPost('nama'),
+                    'kelas' => $this->request->getPost('kelas'),
+                    'foto' => 'avatar.jpg',
+                    'legitimasi_projek' => 'No',
+                    'legitimasi_teori' => 'No'
+                ];
+                // var_dump($data);
+                $insert = $this->peserta_model->insert($data);
+                if ($insert) {
+                    alert_swal('success', 'Suksess', 'Data peserta berhasil ditambahkan');
+                    return redirect()->to('/admin/data-peserta/kelas-xi');
+                } else {
+                    alert_swal('error', 'Gagal', 'Data peserta tidak berhasil ditambahkan');
+                    return redirect()->to('/admin/data-peserta/kelas-xi');
+                }
+            }
+        }
+
+        // Eror jika data tidak valid, menampilkan pesan error
+        alert_swal('error', 'Error', 'Ada kolom yang belum di isi, silahkan periksa kembali');
+
+
+        // Kembalikan ke halaman pengawas
+        return redirect()->to('/admin/data-peserta/kelas-xi');
+    }
+
+    public function insert_peserta_xii()
+    {
+        $validation = \Config\Services::validation();
+        $this->validation->setRule('nis', 'Nis', 'required');
+        $this->validation->setRule('nama', 'Nama', 'required');
+        $this->validation->setRule('kelas', 'Kelas', 'required');
+
+        $dataValid = $this->validation->withRequest($this->request)->run();
+
+        if ($dataValid) {
+            if ($this->request->getMethod()) {
+                $data = [
+                    'nis' => $this->request->getPost('nis'),
+                    'nama' => $this->request->getPost('nama'),
+                    'kelas' => $this->request->getPost('kelas'),
+                    'foto' => 'avatar.jpg',
+                    'legitimasi_projek' => 'No',
+                    'legitimasi_teori' => 'No'
+                ];
+                // var_dump($data);
+                $insert = $this->peserta_model->insert($data);
+                if ($insert) {
+                    alert_swal('success', 'Suksess', 'Data peserta berhasil ditambahkan');
+                    return redirect()->to('/admin/data-peserta/kelas-xii');
+                } else {
+                    alert_swal('error', 'Gagal', 'Data peserta tidak berhasil ditambahkan');
+                    return redirect()->to('/admin/data-peserta/kelas-xii');
+                }
+            }
+        }
+
+        // Eror jika data tidak valid, menampilkan pesan error
+        alert_swal('error', 'Error', 'Ada kolom yang belum di isi, silahkan periksa kembali');
+
+
+        // Kembalikan ke halaman pengawas
+        return redirect()->to('/admin/data-peserta/kelas-xii');
+    }
     // End Insert Fitur
 
     // Document PDF
