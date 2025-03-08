@@ -378,7 +378,7 @@ class Admin extends BaseController
         alert_swal('error', 'Error', 'Ada kolom yang belum di isi, silahkan periksa kembali');
 
 
-        // Kembalikan ke halaman pengawas
+        // // Kembalikan ke halaman pengawas
         return redirect()->to('/admin/data-peserta/kelas-x');
     }
 
