@@ -121,7 +121,7 @@
                         <td>Seni Budaya</td>
                         <td>Matematika</td>
                         <td>Bahasa Inggris</td>
-                        <td>Projek IPA</td>
+                        <td>PKK</td>
                     </tr>
                     <tr>
                         <td style="overflow: auto; height: 50px; vertical-align: middle; width:15%;">1.</td>
