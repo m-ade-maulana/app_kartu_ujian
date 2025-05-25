@@ -35,7 +35,7 @@ class ClientController
 
     public function unduh_kartu_legitimasi_projek($id_peserta)
     {
-        $id = Crypt::decrypt($id_peserta);
+        $id = Crypt::encrypt($id_peserta);
 
         $pathLogo = public_path('assets/images/logos/logo_smk.png');
         $typeLogo = pathinfo($pathLogo, PATHINFO_EXTENSION);
