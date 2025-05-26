@@ -8,7 +8,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>SMK Nusantara 1 Kota Tangerang</title>
-    <link rel="shortcut icon" type="image/png" href="/assets/images/logos/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/assets/images/logos/logo_smk.png" />
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
 
     <style>
