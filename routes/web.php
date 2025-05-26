@@ -24,7 +24,7 @@ Route::get('/client/login', [ClientController::class, 'index'])->name('login.ind
 Route::post('/client/masuk', [ClientController::class, 'masuk'])->name('proses.masuk');
 Route::get('/client/keluar', [ClientController::class, 'keluar'])->name('logout.keluar');
 Route::get('/client/dashboard', [ClientController::class, 'dashboard'])->name('dashboard.dashboard');
-Route::get('/client/cetak/kartu_projek/{id_peserta}', [ClientController::class, 'unduh_kartu_legitimasi_projek'])->name('cetak.cetak_kartu_legitimasi_projek');
+Route::get('/client/cetak/kartu_projek/{id_peserta}', [ClientController::class, 'unduh_kartu_legitimasi_projek'])->name('cetak.unduh_kartu_legitimasi_projek');
 
 // Logout
 Route::get('/logout', [ClientController::class, 'keluar']);

@@ -45,7 +45,7 @@
                             </td>
                             <td>
                                 @if ($peserta->status_legitimasi_projek == 1)
-                                    <a href="{{ route('cetak.cetak_kartu_legitimasi_projek', $peserta->id_peserta) }}"
+                                    <a href="{{ route('cetak.unduh_kartu_legitimasi_projek', Crypt::encrypt($peserta->id_peserta)) }}"
                                         target="_blank" class="badge text-bg-success">Legitimasi Projek</a>
                                 @else
                                     <a class="badge text-bg-muted">Legitimasi Projek</a>

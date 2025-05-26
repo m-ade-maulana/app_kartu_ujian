@@ -46,7 +46,7 @@
             <div class="col-10 col-sm-6 col-md-5 col-lg-4 square-wrapper">
                 <div class="square-box bg-success text-white">
                     <a target="_blank"
-                        href="{{ route('cetak.cetak_kartu_legitimasi_projek', Crypt::encrypt($peserta_ujian->id_peserta)) }}"
+                        href="{{ route('cetak.unduh_kartu_legitimasi_projek', Crypt::encrypt($peserta_ujian->id_peserta)) }}"
                         class="nav-link">
                         <div class="square-content">
                             <img class="" src="/assets/images/logos/online-test.png" width="150" alt="Gambar 2">
