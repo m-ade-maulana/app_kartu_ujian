@@ -6,15 +6,42 @@ use Session;
 
 use App\Imports\DataPesertaUjianImport;
 use App\Models\PesertaUjian;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Routing\Controller;
 
 class AdminController extends Controller
 {
+
+    // public function __construct(Request $request)
+    // {
+    //     $this->middleware(function ($request, $next) {
+    //         if (!Auth::check()) {
+    //             return redirect('/');
+    //         }
+
+    //         // Menambahkan header untuk mencegah cache
+    //         // response()->headers->set('Cache-Control', 'no-cache, no-store, must-revalidate');
+    //         // response()->headers->set('Pragma', 'no-cache');
+    //         // response()->headers->set('Expires', '0');
+
+    //         return $next($request);
+    //     });
+    // }
     public function index()
     {
+        return view('admin.login');
+    }
+
+    public function dashboard()
+    {
+        if (!Auth::check()) {
+            redirect('/');
+        }
         return view('admin.dashboard');
     }
 
@@ -104,5 +131,40 @@ class AdminController extends Controller
         $peserta->update($validate);
 
         return redirect()->route('peserta_ujian.peserta_ujian');
+    }
+
+    public function proses_masuk(Request $request)
+    {
+        // $credential = $request->only('password');
+
+        // if (Auth::guard('web')->attempt($credential)) {
+        //     return redirect()->intended('/client/dashboard');
+        // }
+
+        // return back();
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required|max:8',
+        ]);
+
+
+        $cek_user = User::where('name', $request->username)->first();
+
+        // dd($cek_user);
+        if ($cek_user && Hash::check($request->password, $cek_user->password)) {
+            Auth::login($cek_user);
+            return redirect("/dashboard");
+            // dd($cek_user);
+        }
+
+        return back();
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        session()->invalidate(); // Hapus sesi
+        session()->regenerateToken(); // Hapus token CSRF
+        return redirect('/');
     }
 }

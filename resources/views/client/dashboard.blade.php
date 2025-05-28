@@ -44,17 +44,32 @@
                 </div>
             </div>
             <div class="col-10 col-sm-6 col-md-5 col-lg-4 square-wrapper">
-                <div class="square-box bg-success text-white">
-                    <a target="_blank"
-                        href="{{ route('cetak.unduh_kartu_legitimasi_projek', Crypt::encrypt($peserta_ujian->id_peserta)) }}"
-                        class="nav-link">
-                        <div class="square-content">
-                            <img class="" src="/assets/images/logos/online-test.png" width="150" alt="Gambar 2">
-                            <h5 class="fw-bold text-white">Kartu Ujian</h5>
-                            <p>Klik disini untuk mengunduh kartu ujian</p>
-                        </div>
-                    </a>
-                </div>
+                @if ($peserta_ujian->status_legitimasi_tulis == 1)
+                    <div class="square-box bg-success text-white">
+                        <a target="_blank"
+                            href="{{ route('cetak.unduh_kartu_legitimasi_tulis', Crypt::encrypt($peserta_ujian->id_peserta)) }}"
+                            class="nav-link">
+                            <div class="square-content">
+                                <img class="" src="/assets/images/logos/online-test.png" width="150"
+                                    alt="Gambar 2">
+                                <h5 class="fw-bold text-white">Kartu Ujian</h5>
+                                <p>Klik disini untuk mengunduh kartu ujian</p>
+                            </div>
+                        </a>
+                    </div>
+                @else
+                    <div class="square-box bg-success text-white">
+                        <a class="nav-link">
+                            <div class="square-content">
+                                <img class="" src="/assets/images/logos/online-test.png" width="150"
+                                    alt="Gambar 2">
+                                <h5 class="fw-bold text-white">Kartu Ujian</h5>
+                                <p>Klik disini untuk mengunduh kartu ujian</p>
+                            </div>
+                        </a>
+                    </div>
+                @endif
+
             </div>
         </div>
     </div>
@@ -66,7 +81,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
                     <table class="table">
                         <thead>
                             <tr>

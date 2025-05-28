@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
 
-Route::get('/', [AdminController::class, 'index'])->name('dasboard.index');
+Route::get('/', [AdminController::class, 'index'])->name('login.index');
+Route::post('/login', [AdminController::class, 'proses_masuk'])->name('admin.proses_masuk');
+Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard.dashboard');
 // Presensi
 Route::get('/presensi_guru_staff', [AdminController::class, 'presensi_guru_staff'])->name('presensi_guru_staff.presensi_guru_staff');
 Route::get('/presensi_siswa', [AdminController::class, 'presensi_siswa'])->name('presensi_siswa.presensi_siswa');
@@ -25,6 +28,7 @@ Route::post('/client/masuk', [ClientController::class, 'masuk'])->name('proses.m
 Route::get('/client/keluar', [ClientController::class, 'keluar'])->name('logout.keluar');
 Route::get('/client/dashboard', [ClientController::class, 'dashboard'])->name('dashboard.dashboard');
 Route::get('/client/cetak/kartu_projek/{id_peserta}', [ClientController::class, 'unduh_kartu_legitimasi_projek'])->name('cetak.unduh_kartu_legitimasi_projek');
+Route::get('/client/cetak/kartu_tulis/{id_peserta}', [ClientController::class, 'unduh_kartu_legitimasi_sas'])->name('cetak.unduh_kartu_legitimasi_tulis');
 
 // Logout
 Route::get('/logout', [ClientController::class, 'keluar']);

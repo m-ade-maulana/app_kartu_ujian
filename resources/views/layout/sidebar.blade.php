@@ -2,7 +2,7 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="{{ route('dasboard.index') }}" class="text-nowrap logo-img">
+            <a href="{{ route('dashboard.dashboard') }}" class="text-nowrap logo-img">
                 {{-- <img src="assets/images/logos/logo.svg" alt="" /> --}}
                 <h4>SMK Nusantara 1</h4>
             </a>
@@ -20,7 +20,7 @@
                 </li>
                 {{-- End Title --}}
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ route('dasboard.index') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('dashboard.dashboard') }}" aria-expanded="false">
                         <i class="ti ti-atom"></i>
                         <span class="hide-menu">Dashboard</span>
                     </a>

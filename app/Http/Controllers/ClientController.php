@@ -57,6 +57,30 @@ class ClientController
         return $kartu->stream('kartu-legitimasi-projek.pdf');
     }
 
+    public function unduh_kartu_legitimasi_sas($id_peserta)
+    {
+        $id = Crypt::decrypt($id_peserta);
+
+        $pathLogo = public_path('assets/images/logos/logo_smk.png');
+        $typeLogo = pathinfo($pathLogo, PATHINFO_EXTENSION);
+        $dataLogo = file_get_contents($pathLogo);
+        $base64Logo = 'data:image/' . $typeLogo . ';base64,' . base64_encode($dataLogo);
+
+
+        $pathBarcode = public_path('assets/images/barcode-validasi.png');
+        $typeBarcode = pathinfo($pathBarcode, PATHINFO_EXTENSION);
+        $dataBarcode = file_get_contents($pathBarcode);
+        $base64Barcode = 'data:image/' . $typeBarcode . ';base64,' . base64_encode($dataBarcode);
+
+        $kartu = Pdf::loadView('client.legitimasi.legitimasi_sas', [
+            'peserta_ujian' => PesertaUjian::with(['jurusan', 'kelas'])->findOrFail($id),
+            'logo_smk' => $base64Logo,
+            'barcode' => $base64Barcode
+        ])->setPaper('A4', 'portrait');
+
+        return $kartu->stream('kartu-legitimasi-sas.pdf');
+    }
+
     public function masuk(Request $request)
     {
         // $credential = $request->only('password');
@@ -83,9 +107,7 @@ class ClientController
 
     public function keluar(Request $request)
     {
-        Auth::guard('web')->logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+        Auth::logout();
         return redirect('/client/login');
     }
 }
