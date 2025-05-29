@@ -164,7 +164,7 @@
                 <tr>
                     <td>
                         <div class="mapel-box">
-                            03 Mei 2025
+                            03 Juni 2025
                         </div>
                     </td>
                     <td>
@@ -196,7 +196,7 @@
                 <tr>
                     <td>
                         <div class="mapel-box">
-                            04 Mei 2025
+                            04 Juni 2025
                         </div>
                     </td>
                     <td>
@@ -228,7 +228,7 @@
                 <tr>
                     <td>
                         <div class="mapel-box">
-                            05 Mei 2025
+                            05 Juni 2025
                         </div>
                     </td>
                     <td>
