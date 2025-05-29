@@ -58,7 +58,7 @@
                         </a>
                     </div>
                 @else
-                    <div class="square-box bg-success text-white">
+                    <div class="square-box bg-muted text-white">
                         <a class="nav-link">
                             <div class="square-content">
                                 <img class="" src="/assets/images/logos/online-test.png" width="150"
