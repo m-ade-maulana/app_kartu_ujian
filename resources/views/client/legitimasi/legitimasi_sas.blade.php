@@ -233,15 +233,7 @@
                     </td>
                     <td>
                         <div class="mapel-box">
-                            Bahasa Indonesia <br><br>
-                        </div>
-                        <div class="ttd">
-                            <div class="garis-ttd">Paraf</div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="mapel-box">
-                            Matematika <br><br>
+                            Bahasa Inggris <br><br>
                         </div>
                         <div class="ttd">
                             <div class="garis-ttd">Paraf</div>
@@ -250,6 +242,14 @@
                     <td>
                         <div class="mapel-box">
                             Projek IPAS (X) dan PKK (XI) <br>
+                        </div>
+                        <div class="ttd">
+                            <div class="garis-ttd">Paraf</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="mapel-box">
+                            Informatika <br><br>
                         </div>
                         <div class="ttd">
                             <div class="garis-ttd">Paraf</div>
