@@ -19,6 +19,7 @@ Route::get('/kartu_ujian', [AdminController::class, 'kartu_ujian'])->name('kartu
 // Master
 Route::get('/peserta_ujian', [AdminController::class, 'peserta_ujian'])->name('peserta_ujian.peserta_ujian');
 Route::put('/peserta_ujian/update/{id_peserta}', [AdminController::class, 'update_peserta'])->name('peserta.update_peserta');
+Route::put('/peserta_ujian/add_ruang_peserta/{id_peserta}', [AdminController::class, 'add_ruang_peserta'])->name('peserta.add_ruang_peserta');
 Route::post('/import_data', [AdminController::class, 'import_data_peserta'])->name('import_data.import_data_peserta');
 // Administrasi Guru
 

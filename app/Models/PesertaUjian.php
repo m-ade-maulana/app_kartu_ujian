@@ -25,7 +25,8 @@ class PesertaUjian extends Authenticatable
         'id_kelas',
         'id_jurusan',
         'status_legitimasi_tulis',
-        'status_legitimasi_projek'
+        'status_legitimasi_projek',
+        'ruang_ujian'
     ];
 
     public function jurusan()

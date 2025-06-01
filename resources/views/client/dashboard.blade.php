@@ -30,6 +30,7 @@
     </nav>
 
     <div class="container my-5">
+
         <div class="row justify-content-center g-4">
             <div class="col-10 col-sm-6 col-md-5 col-lg-4 square-wrapper">
                 <div class="square-box bg-success text-white">

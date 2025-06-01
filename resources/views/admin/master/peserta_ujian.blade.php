@@ -25,6 +25,7 @@
                     <tr>
                         <th>Nama</th>
                         <th>Kelas</th>
+                        <th>Ruangan</th>
                         <th>Jurusan</th>
                         <th>Aksi</th>
                     </tr>
@@ -34,6 +35,14 @@
                         <tr>
                             <td>{{ $peserta->nama_siswa }}</td>
                             <td>{{ $peserta->kelas->kelas }}</td>
+                            <td>
+                                @if (!$peserta->ruang_ujian)
+                                    <a href="#" class="badge text-bg-success" data-bs-toggle="modal"
+                                        data-bs-target="#add_ruang_peserta_{{ $peserta->nis }}">Tambah Ruang</a>
+                                @else
+                                    Ruang {{ $peserta->ruang_ujian }}
+                                @endif
+                            </td>
                             <td>
                                 @if ($peserta->jurusan->id_jurusan == 1)
                                     AKL
@@ -110,6 +119,39 @@
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-md btn-block btn-success mt-3">Ubah Data</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+
+    @foreach ($peserta_ujian as $ruang)
+        <div class="modal fade" id="add_ruang_peserta_{{ $ruang->nis }}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Update Data ({{ $ruang->nama_siswa }} - {{ $ruang->id_peserta }})</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('peserta.add_ruang_peserta', ['id_peserta' => $ruang->id_peserta]) }}"
+                            method="post">
+                            @csrf
+                            @method('PUT')
+                            <div class="form-group">
+                                <label for="ruang_ujian" class="fw-bold">Legitimasi Projek</label>
+                                <select name="ruang_ujian" id="ruang_ujian" class="form-control">
+                                    <?php
+                                    $ruang = 8;
+                                    for ($i = 1; $i <= $ruang; $i++) { ?>
+                                    <option value="<?= $i ?>">Ruang <?= $i ?></option>
+                                    <?php }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-md btn-block btn-success mt-3">Tambah</button>
                             </div>
                         </form>
                     </div>

@@ -117,6 +117,19 @@ class AdminController extends Controller
         return redirect('/');
     }
 
+    public function add_ruang_peserta(Request $request, $id_peserta): RedirectResponse
+    {
+        $validate = $request->validate([
+            'ruang_ujian' => 'required'
+        ]);
+
+        $peserta = PesertaUjian::findOrFail($id_peserta);
+
+        $peserta->update($validate);
+
+        return redirect()->route('peserta_ujian.peserta_ujian');
+    }
+
     public function update_peserta(Request $request, $id_peserta): RedirectResponse
     {
         $validate = $request->validate([

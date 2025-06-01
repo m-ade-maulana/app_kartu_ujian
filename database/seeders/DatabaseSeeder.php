@@ -23,13 +23,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // Seed User
-        DB::table('user')->insert([
-            'name' => 'fauzi',
-            'email' => 'seringcoding@gmail.com',
-            'password' => Crypt::encrypt('12345678')
-        ]);
-
         // Seed Kelas
         DB::table('kelas')->insert([
             'id_kelas' => 1,
