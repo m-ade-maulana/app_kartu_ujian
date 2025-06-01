@@ -30,7 +30,9 @@
     </nav>
 
     <div class="container my-5">
-
+        <div class="text-center my-4">
+            <h1>{{ $peserta_ujian->nama_siswa }} - Ruang {{ $peserta_ujian->ruang_ujian }}</h1>
+        </div>
         <div class="row justify-content-center g-4">
             <div class="col-10 col-sm-6 col-md-5 col-lg-4 square-wrapper">
                 <div class="square-box bg-success text-white">
